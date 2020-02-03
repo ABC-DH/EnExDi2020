@@ -49,13 +49,13 @@
  				* INTRO
  				******************************************-->
 				<section>
-					<h3>Linea di comando</h3>
-					<p>Una introduzione</p>
+					<h3>Command line</h3>
+					<p>Text preparation</p>
 					
 					<br />
 					<p style="font-size: 20pt"><span style="background-color: #c45875; color: white">&nbsp;Titolo scuola&nbsp;</span><br />
-						<span style="color: #000000; font-size: 18pt">Luogo</span><br />Data</p>
-						<p style="font-size: 18pt;">Twitter: #hashtag</p>
+						<span style="color: #000000; font-size: 18pt">University of Poitiers</span><br />12 February 2020</p>
+						<p style="font-size: 18pt;">Twitter: #enexdi2020</p>
 
 					<br />
 					<p style="font-size: 18pt; margin-bottom: -15px;"><strong>Greta H. Franzini</strong></p>
@@ -71,19 +71,16 @@
 				<section>
 					<h3>Overview</h3>
 
-					<p>Teoria</p>
+					<p>Theory</p>
 						<ul>
-							<li>Cos'è la linea di comando</li>
+							<li>What is the command line</li>
+							<li>Command line for NLP</li>
 						</ul>
 					
-					<p>Pratica</p>
+					<p>Practice</p>
 					<ul>
-						<li>Navigazione del sistema</li>
-						<li>Analisi testuale</li>
-							<ul style="font-size: 20pt">
-								<li>Pulizia di un testo per l'analisi</li>
-								<li>Calcolo della ricchezza lessicale</li>
-							</ul>
+						<li>Text preparation</li>
+						<li>Lexical richness</li>
 					</ul>
 				</section>
 
@@ -93,53 +90,51 @@
  				******************************************-->
 				<section>
 					<section>
-						<h1>Teoria</h1>
+						<h1>Theory</h1>
 					</section>
 
 					<section>
-						<h2>Linea/riga di comando (CLI)</h2>
-						<p>Nota anche come "terminale" in sistemi Unix.</p>
-						<p class="fragment">Una console o interfaccia utente per impartire comandi di elaborazione alla macchina</p>
+						<h2>Command line</h2>
+						<p>Also known as "terminal" in Unix systems.</p>
+						<p class="fragment">A user interface to per impartire comandi di elaborazione alla macchina</p>
 						
 						<img class="fragment" src="./images/terminal.png" style="border: none; box-shadow: none !important; width: 600px">
 					</section>
 
 
 					<section>
-						<h2>Linea/riga di comando (CLI)</h2>
-						<p>Perché usarla?</p>
+						<h2>Command line</h2>
+						<p>Why use it?</p>
 
-						<p>Ai fini di TAL, e.g.:</p>
+						<p>For NLP purposes, for instance:</p>
 						<ul>
-							<li class="fragment">Preparazione dei dati con RegEx (Regular Expressions)</li>
+							<li class="fragment">Text/data preparation with RegEx (Regular Expressions)</li>
 								<ul style="font-size: 20pt;" class="fragment">
-									<li>Regular Expressions (= espressione regolare) sequenza di simboli (quindi una stringa) che identifica un insieme di stringhe</li> <!-- do a section on Regex-->
+									<li>Regular Expressions: sequence of symbols identifying un insieme di stringhe</li> <!-- do a section on Regex-->
 								</ul>
-							<li class="fragment">Lancio di strumenti di TAL</li>
-							<li class="fragment">Capire come funzionano strumenti analoghi (e.g. web) di analisi testuale</li>
-							<li class="fragment">Interazione con computer portatili e server</li>
+							<li class="fragment">Launching NLP tools (e.g. TreeTagger)</li>
+							<li class="fragment">Interaction with small machines and servers</li>
 						</ul>	
 
 						<aside class="notes">
-							Una espressione regolare è una sequenza di simboli (quindi una stringa) che identifica un insieme di stringhe. Una espressione regolare definisce una funzione che prende in ingresso una stringa, e restituisce in uscita un valore del tipo sì/no, a seconda che la stringa segua o meno un certo pattern.
+							
 						</aside>					
 					</section>
 				
 
 					<section>
-						<h3>Analisi testuale</h3>
-						
+						<h3>Text preparation</h3>
 						<p>Rientrano:</p>
 						<ul>
 							<li>...</li>
 							<li>...</li>
-							<li>Ricchezza lessicale</li>
+							<li></li>
 						</ul>
 					</section>
 
 
 					<section>
-						<h3>Ricchezza lessicale</h3>
+						<h3>Lexical richness</h3>
 						<p>Rapporto fra l'ampiezza del vocabolario (type) e il numero totale di parole (token) nel testo.</p>
 
 						<p>RL = TTR</p>
@@ -157,7 +152,7 @@
 					</section>
 
 					<section>
-						<h3>Ricchezza lessicale</h3>
+						<h3>Lexical richness</h3>
 						<p>Token vs. Type -- riprendi slide dallo slideset di NLP</p>
 					</section>
 
@@ -178,7 +173,7 @@
 
 
 					<section>
-						<h3>Ricchezza lessicale</h3>
+						<h3>Lexical richness</h3>
 						<p>A che percentuale corrisponde una TTR alta/bassa?</p>
 
 						<p>Dipende!</p>
@@ -192,8 +187,8 @@
 
 
 					<section>
-						<h3>Ricchezza lessicale</h3>
-						<p>TTR utile se si confrontano testi di simile lunghezza</p>
+						<h3>Lexical richness</h3>
+						<p>TTR adequate for texts of similar length</p>
 
 						<p>Se i testi che si vogliono confrontare hanno lunghezze diverse, meglio calcolare la standardised TTR (STTR): si divide il testo in chunk di 1000 parole, si calcola la TTR su ogni chunk e si fa la media dei valori ottenuti.</p>
 					</section>
@@ -206,24 +201,13 @@
 				<section>
 
 					<section> 
-						<h1>Pratica</h1>
-					</section>
-
-
-					<section>
-						<h2>Requisiti</h2>
-						<p><span style="background-color: black; color: white;">&nbsp;Controllo installazioni&nbsp;</span></p>
-						<ul>
-							<li>Windows: Cygwin</li>
-						    <li>Windows, Mac, Linux: Sublime Text Editor 3</li>
-						  </ul>
+						<h1>Practice</h1>
 					</section>
 				 
 
 					<section>
 						<h3>Esercizi</h3>
 						<ol>
-							<li>Navigazione file di sistema</li>
 							<li>Calcolo della ricchezza lessicale</li>
 								<ul style="font-size: 20pt">
 									<li><em>Due alchimisti italiani</em>, Racconti storici e morali, di Cesare Cantù (1878)</li>
@@ -233,216 +217,6 @@
 									<li>Testo fornito</li>
 								</ul>
 						</ol>
-					</section>
-
-				</section>
-
-				<!--*****************************************
- 				* PRATICA: NAVIGAZIONE FILE DI SISTEMA
- 				******************************************-->
- 				<section>
- 					<section>
- 						<h1>Pratica</h1>
- 						<h2>Navigazione file del sistema</h2>
- 					</section>
-					<section>
-						<h3>Navigazione file di sistema</h3>
-						<ul>
-							<li>Spostamento fra directory</li>
-							<li>Creazione e rimozione di file e cartelle</li>
-							<li>Rinomina e copia di file e cartelle</li>
-						</ul>
-					</section>
-
-					
-					<section>
-						<h3>Navigazione file di sistema</h3>
-						<p>Apri la CLI</p>
-						<img src="./images/terminal.png" style="border: none; box-shadow: none !important; width: 600px">
-					</section>
-
-
-					<section>
-						<h3>E.1: Navigazione file di sistema</h3>
-						<p>Present working directory: <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;pwd&nbsp;</span></p>
-						<pre><code class="nohighlight">greta$ pwd</code></pre>
-						<p>Mostra la mia posizione attuale</p>
-						<pre><code class="nohighlight">greta$ pwd
-						/Users/greta</code></pre>
-					</section>
-
-
-					<section>
-						<h3>E.1: Navigazione file di sistema</h3>
-						<p>Nome utente: <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;whoami&nbsp;</span></p>
-						<pre><code class="nohighlight">greta$ whoami</code></pre>
-						<p>Mostra il mio nome utente sulla macchina in uso</p>
-						<pre><code class="nohighlight">greta</code></pre>
-					</section>
-
-
-					<section>
-						<h3>E.1: Navigazione file di sistema</h3><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;ls -l&nbsp;</span></p>
-						<pre><code class="nohighlight">greta$ ls -l</code></pre>
-						<p>Mostra la lista dei contenuti della directory attuale</p>
-						<pre><code class="nohighlight">$ total 352
-						drwx------@  6 greta  staff     204 22 Dic  2018 Applications
-						drwx------+ 17 greta  staff     578 23 Giu 15:03 Desktop
-						drwx------+  5 greta  staff     170 13 Gen 15:27 Documents
-						drwx------+ 19 greta  staff     646 23 Giu 13:55 Downloads
-						...</code></pre>
-					</section>
-
-
-					<section> 
-						<h3>E.1: Navigazione file di sistema</h3>
-						<p>Cambia directory: <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;cd &lt;directory&gt;&nbsp;</span></p>
-						<pre><code class="nohighlight">greta$ cd Desktop</code></pre>
-
-						<p>Mi sposto sul <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;Desktop&nbsp;</span></p>
-						<pre><code class="nohighlight">Desktop greta$</code></pre>
-					</section>
-
-
-					<section> 
-						<h3>E.1: Navigazione file di sistema</h3>
-						<p>Cambia alla directory precedente: <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;cd ..&nbsp;</span></p>
-						<pre><code class="nohighlight">Desktop greta$ cd ..</code></pre>
-
-						<p>Mi riporta a <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;greta&nbsp;</span></p>
-						<pre><code class="nohighlight">greta$</code></pre>
-					</section>
-
-
-					<section> 
-						<h3>E.1: Navigazione file di sistema</h3>
-						<p>Cambia directory, azzera: <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;cd&nbsp;</span></p>
-						
-						<p>Sono qui</p>
-						<pre><code class="nohighlight">/Users/greta/Desktop/cad/corpus-italian-shortstories</code></pre>
-
-						<p>Voglio tornare alla directory <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;greta&nbsp;</span></p>
-						<pre><code class="nohighlight">corpus-italian-shortstories$ cd
-						greta$</code></pre>
-					</section>
-
-
-					<section>
-						<h3>E.1: Navigazione file di sistema</h3>
-						<p>Crea un file: <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;touch &lt;file.txt&gt;&nbsp;</span></p>
-						<pre><code class="nohighlight">$ cd Desktop
-						Desktop greta$ touch ciao.txt</code></pre>
-
-						<p>Mi crea un file di testo intitolato <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;ciao.txt&nbsp;</span></p>
-						<pre><code class="nohighlight">Desktop greta$ ls -l
-						-rw-r--r--   1 greta  staff       0 23 Giu 21:24 ciao.txt
-						...</code></pre>
-					</section>
-	
-
-					<section>
-						<h3>E.1: Navigazione file di sistema</h3>
-						<p>Crea una cartella: <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;mkdir &lt;cartella&gt;&nbsp;</span></p>
-						<pre><code class="nohighlight">$ cd Desktop
-						Desktop greta$ mkdir poesie</code></pre>
-
-						<p>Mi crea una cartella intitolata <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;poesie&nbsp;</span></p>
-						<pre><code class="nohighlight">Desktop greta$ ls -l
-						drwxr-xr-x   2 greta  staff      68 23 Giu 21:37 poesie
-						...</code></pre>
-					</section>
-
-
-					<section> 
-						<h3>E.1: Navigazione file di sistema</h3>
-						<p>Rinomina un file: <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;mv oldname.txt newname.txt&nbsp;</span> 
-						<pre><code class="nohighlight">greta$ mv ciao.txt CIAO.txt</code></pre>
-						<p>o una cartella: <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;&nbsp;mv oldname newname</span> </p>
-						<pre><code class="nohighlight">greta$ mv poesie PROSA</code></pre>
-					</section>
-
-
-					<section> 
-						<h3>E.1: Navigazione file di sistema</h3>
-						<p>Elimina un file: <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;rm file.txt&nbsp;</span></p>
-						<pre><code class="nohighlight">greta$ rm ciao.txt</code></pre>
-						<br />
-						<p>o una cartella: <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;rmdir foldername&nbsp;</span></p>
-						<pre><code class="nohighlight">greta$ rmdir poesie</code></pre>
-					</section>
-
-					<section> 
-						<h3>E.1: Navigazione file di sistema</h3>
-						<p>Fai una copia/duplicato di un file nella directory attuale:<br />
-							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;cp filename.txt filename-copy.txt&nbsp;</span></p>
-						<br />
-						<pre><code class="nohighlight">greta$ cp ciao.txt ciao-copia.txt</code></pre>
-					</section>
-
-					<section> 
-						<h3>E.1: Navigazione file di sistema</h3>
-						<p>Fai una copia/duplicato di un file in un'altra directory:<br />
-							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;cp filename.txt foldername&nbsp;</span></p>
-						<br />
-						<pre><code class="nohighlight">greta$ cp ciao.txt poesie</code></pre>
-					</section>
-					
-
-					<section> 
-						<h3>E.1: Navigazione file di sistema</h3>
-						<p>Per ripulire lo schermo:<br /><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;clear&nbsp;</span></p>
-						<br />
-						<pre><code class="nohighlight">greta$ clear</code></pre>
-					</section>
-
-
-					<section>
-						<h2>Tokenizzazione con la riga di comando</h2>
-						<p>Dato un file di testo, produrre tokens e la loro frequenza (ordinati per frequenza decrescente)</p>
-
-						<pre><code class="nohighlight">tr 'A-Z' 'a-z' < INPUT-FILE.txt | tr -sc '[:alpha:]' '\n' | sort | uniq -c | sort -n -r > OUTPUT-FILE.txt</code></pre>
-
-						<ul style="font-size: 20pt;">
-							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;tr 'A-Z' 'a-z'&nbsp;</span> trasforma maiuscole in minuscole</li>
-							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;tr -sc '[:alpha:]' '\n'&nbsp;</span> trasforma tutto ciò che non è una lettera in un invio (new line)</li>
-							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;sort | uniq -c&nbsp;</span> elenca alfabeticamente e conta ogni type</li>
-							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;sort -n -r&nbsp;</span> elenca i conteggi (numericamente) in modo descrescente </li>
-						</ul>
-					</section>
-
-
-					<section>
-						<h2>MAIUSCOLO > minuscolo</h2>
-						<p>Per trasformare una lista di file da maiuscolo in minuscolo:</p>
-						<br />
-						<pre><code class="nohighlight">for i in $(ls | grep [A-Z]); do mv -i $i `echo $i | tr 'A-Z' 'a-z'`; done</code></pre>
-					</section>
-
-					<section>
-						<h2>Rimozione markup XML</h2>
-						<p>Per rimuovere tutti i tag XML da un file:</p>
-						<br />
-						<pre><code class="nohighlight">cat filename.xml | sed 's/\<[^<>]*\>//g' > filename.txt</code></pre>
-					</section>
-
-					<section>
-						<h2>Comandi misti</h2>
-
-						<ul>
-							<li><code>grep 'hello' filename</code> to extract all instances of a word in a file</li>
-							<li><code>egrep 'hello there' filename</code> to search for a specific string of text</li>
-							<li><code>tail filename</code> to return the last 10 lines of the file</li>
-							<li><code>tail -20 filename</code> to return the last 20 lines of the file</li>
-							<li><code>head filename</code> to return the first 10 lines of the file</li>
-							<li><code>head -20 filename</code> to return the first 20 lines of the file</li>
-							<li><code>top</code> to view all running processes on a machine</li>
-							<li><code>df</code> "Disk Free", to reveal amount of storage space in the current directory</li>
-						</ul>
-					</section>
-
-
-					<section>
-						<img src="./images/question.png" style="border: none; box-shadow: none !important; width: 200px;">
 					</section>
 
 				</section>
@@ -624,10 +398,10 @@
 				<section>
 					<section>
 						<h1>Pratica</h1>
-						<h2>Pulizia di un testo</h2>
+						<h2>Text preparation</h2>
 					</section>
+					
 					<section>
-						<h3>E.3: Pulizia di un file</h3>
 						<p>Poniamo di voler fare delle analisi linguistico-testuali su un testo digitalizzato disponibile online. Cosa facciamo?</p>
 						<ol>
 							<li>Scarichiamo il file</li>
@@ -637,17 +411,15 @@
 						</ol>
 					</section>
 
-
 					<section>
-						<h3>Pulizia di un file</h3>
-						<p>Caso studio:<br /><br />
-							<span style="font-family: Pooh; font-size: 2em">Winnie the Pooh</span><br />(1926)
+						<h3>Text preparation</h3>
+						<p>Caso studio:	Testo (1926)
 						</p>
 					</section>
 
 
 					<section>
-						<h3>Pulizia di un file</h3>
+						<h3>Text preparation</h3>
 						<ol>
 							<li>Scarichiamo il file</li>
 								<ul>
@@ -665,10 +437,55 @@
 
 
 					<section>
-						<h3>Pulizia di un file</h3>
-						<p>Nella cartella `data` ci sono sia il txt che il pdf.</p>
-
+						<h2>Removal of XML markup</h2>
+						<p>To remove all XML tags from the file:</p>
+						<br />
+						<pre><code class="nohighlight">cat filename.xml | sed 's/\<[^<>]*\>//g' > filename.txt</code></pre>
 					</section>
+
+
+					<section>
+						<h2>Tokenisation</h2>
+						<p>Dato un file di testo, produrre tokens e la loro frequenza (ordinati per frequenza decrescente)</p>
+
+						<pre><code class="nohighlight">tr 'A-Z' 'a-z' < INPUT-FILE.txt | tr -sc '[:alpha:]' '\n' | sort | uniq -c | sort -n -r > OUTPUT-FILE.txt</code></pre>
+
+						<ul style="font-size: 20pt;">
+							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;tr 'A-Z' 'a-z'&nbsp;</span> trasforma maiuscole in minuscole</li>
+							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;tr -sc '[:alpha:]' '\n'&nbsp;</span> trasforma tutto ciò che non è una lettera in un invio (new line)</li>
+							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;sort | uniq -c&nbsp;</span> elenca alfabeticamente e conta ogni type</li>
+							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;sort -n -r&nbsp;</span> elenca i conteggi (numericamente) in modo descrescente </li>
+						</ul>
+					</section>
+
+
+					<section>
+						<h2>UPPER CASE > lower case</h2>
+						<p>Per trasformare una lista di file da maiuscolo in minuscolo:</p>
+						<br />
+						<pre><code class="nohighlight">for i in $(ls | grep [A-Z]); do mv -i $i `echo $i | tr 'A-Z' 'a-z'`; done</code></pre>
+					</section>
+
+
+					<section>
+						<h2>Mixed commands</h2>
+						<ul>
+							<li><code>grep 'hello' filename</code> to extract all instances of a word in a file</li>
+							<li><code>egrep 'hello there' filename</code> to search for a specific string of text</li>
+							<li><code>tail filename</code> to return the last 10 lines of the file</li>
+							<li><code>tail -20 filename</code> to return the last 20 lines of the file</li>
+							<li><code>head filename</code> to return the first 10 lines of the file</li>
+							<li><code>head -20 filename</code> to return the first 20 lines of the file</li>
+						</ul>
+					</section>
+
+
+					<section>
+						<img src="./images/question.png" style="border: none; box-shadow: none !important; width: 200px;">
+					</section>
+
+				</section>
+
 
 				</section>
 
@@ -679,7 +496,7 @@
 
  				<section>
  					<section>
- 						<h1>Altri comandi</h1>
+ 						<h1>Other commands</h1>
  					</section>
  					<section>
  						<h3><span style="font-family: monospace">grep</span></h3>
@@ -710,6 +527,21 @@
 						<pre><code class="nohighlight">greta$ cat file.txt | grep -v -e "agg." -e "avv." -e "v." -e "indef." ...</code></pre>
 					</section>
 
+					<section>
+						<h2>Comandi misti</h2>
+
+						<ul>
+							<li><code>grep 'hello' filename</code> to extract all instances of a word in a file</li>
+							<li><code>egrep 'hello there' filename</code> to search for a specific string of text</li>
+							<li><code>tail filename</code> to return the last 10 lines of the file</li>
+							<li><code>tail -20 filename</code> to return the last 20 lines of the file</li>
+							<li><code>head filename</code> to return the first 10 lines of the file</li>
+							<li><code>head -20 filename</code> to return the first 20 lines of the file</li>
+							<li><code>top</code> to view all running processes on a machine</li>
+							<li><code>df</code> "Disk Free", to reveal amount of storage space in the current directory</li>
+						</ul>
+					</section>
+
 				</section>
 
 				<!--*****************************************
@@ -718,10 +550,10 @@
 
 				<section>
 					<section>
-						<h1>Risorse</h1>
+						<h1>Resources</h1>
 					</section>
 					<section>
-						<h3>Tutorial</h3>
+						<h3>Tutorials</h3>
 							<ul>
 								<li><a href="http://www.hongkiat.com/blog/basic-linux-commands/" target="_blank" title="Opens in new tab">Basic Linux commands</a></li>
 								<li><a href="http://guide.bash.academy/" target="_blank" title="Opens in new tab">Bash tutorial</a></li>
