@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<!--<link rel="stylesheet" href="lib/css/monokai.css">-->
+
+		<!-- Fontawesome -->
+		<link href="./fontawesome-5.9.0-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+
+		<!-- highlight.js -->
+		<link rel="stylesheet" href="./highlight/styles/monokai.css">
+		<script src="./highlight/highlight.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				
+				<!--*****************************************
+ 				* INTRO
+ 				******************************************-->
+				<section>
+					<h3>Natural Language Processing</h3>
+					<p>An introduction</p>
+					
+					
+					<p style="font-size: 20pt"><span style="background-color: #c45875; color: white">&nbsp;Encoder, Exploiter, Diffuser: Les humanités numériques dans les projets de recherche&nbsp;</span><br />
+						<span style="color: #000000; font-size: 18pt">Winter School · University of Poitiers</span><br />12 February 2020</p>
+						<p style="font-size: 18pt;">Twitter: #enexdi2020</p>
+
+					<br />
+					<p style="font-size: 18pt; margin-bottom: -15px;"><strong>Greta H. Franzini</strong></p>
+					<!--<p style="font-size: 14pt; margin-top: -20px">Università Cattolica del Sacro Cuore (Milano)</p>-->
+					<img src="./images/unicatt-logo.png" style="border: none; box-shadow: none !important; width: 150px">
+					<!--<img src="./images/abcdh-logo-MASTER.png" style="border: none; box-shadow: none !important; width: 100px">-->
+					
+					<aside class="notes">
+						
+					</aside>
+				</section>
+				
+				<!--*****************************************
+ 				* WHO AM I
+ 				******************************************-->
+				<section>
+					<h2>Who am I?</h2>
+					
+					<ul style="text-align: left;">
+						<li>BA Hons. in Classics · King's College London</li>
+							<ul style="font-size: 15pt; list-style: none;">
+								<li><span style="background-color: black; color: white">&nbsp;philology&nbsp;</span></li>
+							</ul>
+						&nbsp;
+						<li>MA in Digital Humanities · King's College London</li>
+							<ul style="font-size: 15pt; list-style: none;">
+								<li>
+									<span style="background-color: black; color: white">&nbsp;TEI XML&nbsp;</span> 
+									<span style="background-color: black; color: white">&nbsp;XSLT&nbsp;</span>
+									<span style="background-color: black; color: white">&nbsp;web development with HTML/CSS&nbsp;</span>
+								</li>
+							</ul>
+						&nbsp;
+						<li>Ph.D in Information Studies · University College London</li>
+							<ul style="font-size: 15pt; list-style: none;">
+								<li>
+									<span style="background-color: black; color: white">&nbsp;digital editions&nbsp;</span>
+									<span style="background-color: black; color: white">&nbsp;TEI XML (EpiDoc)&nbsp;</span> 
+									<span style="background-color: black; color: white">&nbsp;palaeography&nbsp;</span>
+									<span style="background-color: black; color: white">&nbsp;content analysis&nbsp;</span>
+								</li>
+							</ul>
+					</ul>	
+					<!--<br /><br />
+					<p><strong>Not</strong> a linguist <strong>nor</strong> a computer scientist</p>-->
+
+						<aside class="notes">
+						</aside>						
+				</section>
+
+				<section>
+					<h2>Who am I?</h2>
+
+					<ul style="text-align: left;">
+						<li>Leipzig (2013-2015) · Open Greek &amp; Latin Project</li>
+							<ul style="font-size: 15pt;">
+								<li>Digitisation of critical editions of Greek and Latin texts</li>
+								<li style="list-style: none;">
+									<span style="background-color: black; color: white">&nbsp;digitisation&nbsp;</span>
+									<span style="background-color: black; color: white">&nbsp;OCR&nbsp;</span>
+									<span style="background-color: black; color: white">&nbsp;project management&nbsp;</span>
+								</li>
+							</ul>
+						&nbsp;
+						<li>Göttingen (2015-2018) · Text Reuse Detection with TRACER</li>
+							<ul style="font-size: 15pt;">
+								<li>Automatic identification of verbatim quotations and paraphrase in ancient texts</li>
+								<li style="list-style: none;">
+									<span style="background-color: black; color: white">&nbsp;Information Retrieval&nbsp;</span>
+									<span style="background-color: black; color: white">&nbsp;NLP&nbsp;</span>
+									<span style="background-color: black; color: white">&nbsp;stylometry&nbsp;</span>
+									<span style="background-color: black; color: white">&nbsp;command line&nbsp;</span>
+								</li>
+							</ul>
+						&nbsp;
+						<li>Milan (2018-present) · LiLa: Linking Latin</li>
+							<ul style="font-size: 15pt;">
+								<li>Connecting linguistic resources and tools for Latin with Linked Data technology</li>
+								<li style="list-style: none;">
+									<span style="background-color: black; color: white">&nbsp;NLP&nbsp;</span>
+									<span style="background-color: black; color: white">&nbsp;SQL databases&nbsp;</span>
+									<span style="background-color: black; color: white">&nbsp;Linked Data&nbsp;</span>
+								</li>
+							</ul>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Current projects</h2>
+
+					<ul style="text-align: left;">
+						<li><img src="./images/lila-logo-transp.png" style="border: none; box-shadow: none !important; width: 40px"/> LiLa: Latin WordNet</li>
+							<ul>
+								<li style="font-size: 12pt;"><strong>Franzini, G.</strong>, Peverelli, A., Ruffolo, P., Passarotti, M., Sanna, H., Signoroni, E., Ventura, V., Zampedri, F. (2019) 'Nunc est aestimandum: Towards an evaluation of the Latin WordNet', Proceedings of the Sixth Italian Conference on Computational Linguistics (CLiC-it 2019). Bari, November 2019, 13-15. DOI: 10.5281/zenodo.3518774</li>
+								<!--<li style="font-size: 12pt;">Passarotti, M., Cecchini, F. M., Litta, E., <strong>Franzini, G.</strong>, Mambrini, F., Ruffolo, P. (2019) 'LiLa: Linking Latin – A Knowledge Base of Linguistic Resources and NLP Tools', 2nd Conference on Language, Data and Knowledge (LDK 2019). Leipzig, May 2019, 20-23. DOI: 10.5281/zenodo.3358550</li>-->
+							</ul>
+						<li><img src="./images/metal-hand-bn.png" style="border: none; box-shadow: none !important; width: 40px"/><img src="./images/verba-bestiae.png" style="border: none; box-shadow: none !important; width: 250px"/></li>
+							<ul>
+								<li style="font-size: 12pt;">Cecchini, F. M., <strong>Franzini, G.</strong>, Passarotti, M. (forthcoming 2020) 'Verba Bestiae: How Latin conquered Heavy Metal', Multilingual Metal: Sociocultural, Linguistic and Literary Perspectives on Heavy Metal Lyrics (Emerald Studies in Metal Music and Culture). Emerald Publishing Limited.</li>
+							</ul>
+						<li><img src="./images/merlin.png" style="border: none; box-shadow: none !important; width: 40px"/> Latin in 100 years of movies and TV series</li>
+						<li>Catalogue of Digital Editions (with the ACDH)</li>
+							<ul>
+								<li style="font-size: 12pt;"><strong>Franzini, G.</strong>, Mahony, S., and Terras, M. (2016), 'A Catalogue of Digital Editions', In: Pierazzo, E. and Driscoll, M. J. (eds) Digital Scholarly Editing: Theories and Practices. Cambridge: Open Book Publishers. DOI: 10.11647/OBP.0095</li>
+							</ul>
+					</ul>
+				</section>
+
+				<!--*****************************************
+ 				* THE COURSE
+ 				******************************************-->
+
+				<section>
+					<h2>The course</h2>
+
+					<ul>
+						<li><strong>Theory</strong></li>
+							<ul style="font-size: 22pt;">
+								<li>Overview of Natural Language Processing</li>
+									<ul style="font-size: 16pt">
+										<li>Principles of tokenisation, lemmatisation , Part-of-Speech tagging, morphological analysis, named entity recognition, syntactic parsing, semantic analysis, etc.</li>
+									</ul>
+
+							</ul>
+						<li><strong>Practice</strong></li>
+							<ul style="font-size: 22pt;">
+								<li>Text preparation with the command line: count, sort, extract, format, clean data</li>
+								<li>Lemmatisation and PoS-tagging (with TreeTagger): basics of any NLP project</li>
+							</ul>
+							<br />
+						<li><strong>Not covered</strong></li>
+							<ul style="font-size: 22pt;">
+								<li>Programming</li>
+							</ul>
+					</ul>
+
+					
+
+				</section>
+
+			
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
