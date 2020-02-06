@@ -49,11 +49,9 @@
  				* INTRO
  				******************************************-->
 				<section>
-					<h3>Command line</h3>
-					<p>Text preparation</p>
+					<h1>Practice</h1>
 					
-					<br />
-					<p style="font-size: 20pt"><span style="background-color: #c45875; color: white">&nbsp;Titolo scuola&nbsp;</span><br />
+					<p style="font-size: 20pt"><span style="background-color: #c45875; color: white">&nbsp;Encoder, Exploiter, Diffuser: Les humanités numériques dans les projets de recherche&nbsp;</span><br />
 						<span style="color: #000000; font-size: 18pt">University of Poitiers</span><br />12 February 2020</p>
 						<p style="font-size: 18pt;">Twitter: #enexdi2020</p>
 
@@ -68,35 +66,23 @@
 				</section>
 				
 
-				<section>
-					<h3>Overview</h3>
-
-					<p>Theory</p>
-						<ul>
-							<li>What is the command line</li>
-							<li>Command line for NLP</li>
-						</ul>
-					
-					<p>Practice</p>
-					<ul>
-						<li>Text preparation</li>
-						<li>Lexical richness</li>
-					</ul>
-				</section>
 
 
 				<!--*****************************************
- 				* TEORIA
+ 				* PRATICA: PREPARAZIONE DI UN TESTO
  				******************************************-->
+
 				<section>
 					<section>
-						<h1>Theory</h1>
+						<h1>Command line</h1>
+						<h2>Text preparation</h2>
 					</section>
+
 
 					<section>
 						<h2>Command line</h2>
 						<p>Also known as "terminal" in Unix systems.</p>
-						<p class="fragment">A user interface to per impartire comandi di elaborazione alla macchina</p>
+						<p class="fragment">A user interface to type commands directly to the machine</p>
 						
 						<img class="fragment" src="./images/terminal.png" style="border: none; box-shadow: none !important; width: 600px">
 					</section>
@@ -104,132 +90,256 @@
 
 					<section>
 						<h2>Command line</h2>
-						<p>Why use it?</p>
+						<p>Why use it in NLP?</p>
 
-						<p>For NLP purposes, for instance:</p>
 						<ul>
 							<li class="fragment">Text/data preparation with RegEx (Regular Expressions)</li>
 								<ul style="font-size: 20pt;" class="fragment">
-									<li>Regular Expressions: sequence of symbols identifying un insieme di stringhe</li> <!-- do a section on Regex-->
+									<li>Regular Expressions: sequence of characters identifying a search pattern</li> <!-- do a section on Regex-->
 								</ul>
 							<li class="fragment">Launching NLP tools (e.g. TreeTagger)</li>
-							<li class="fragment">Interaction with small machines and servers</li>
-						</ul>	
-
-						<aside class="notes">
-							
-						</aside>					
-					</section>
-				
-
-					<section>
-						<h3>Text preparation</h3>
-						<p>Rientrano:</p>
-						<ul>
-							<li>...</li>
-							<li>...</li>
-							<li></li>
-						</ul>
+							<li class="fragment">Interaction with both small machines and servers</li>
+						</ul>					
 					</section>
 
-
+		
 					<section>
-						<h3>Lexical richness</h3>
-						<p>Rapporto fra l'ampiezza del vocabolario (type) e il numero totale di parole (token) nel testo.</p>
-
-						<p>RL = TTR</p>
-
-						<p>La TTR dello scritto è solitamente più alta del parlato.</p>
-
-						<ul>
-							<li>Rientra nell'analisi lessico-testuale. Applicazioni:</li>
-								<ul>
-									<li>Cambiamento linguistico nel tempo</li>
-									<li>Studi di traduzione</li>
-									<li>Acquisizione e sviluppo della lingua nei bambini</li>
-								</ul>
-						</ul>
-					</section>
-
-					<section>
-						<h3>Lexical richness</h3>
-						<p>Token vs. Type -- riprendi slide dallo slideset di NLP</p>
-					</section>
-
-					<section>
-						<h3>Ricchezza lessicale</h3>
-						<p>Nota come <span style="background-color: black; color: white">&nbsp;Type/Token Ratio&nbsp;</span> (TTR)</p>
+						<h2>Text preparation</h2>
 						<br />
-						<p>Qualche idea su come si faccia?</p>
-						<p class="fragment"><span style="background-color: black; color: white">&nbsp;(Types/Tokens) * 100 = N%&nbsp;</span></p>
-						<p class="fragment">Più alta la ratio, più ricco/vario il lessico.</p>
-
-						<p>TTR alta: molti elementi lessicali diversi; alta percentuale delle parole ha un significato specifico</p>
-						<p>TTR bassa: poche parole specifiche usate, mentre quelle più generali sono frequenti</p>
-
-						<p>Cosa influisce sulla ricchezza del lessico?</p>
-						<!-- erudizione dell'autore, pubblico di riferimento, genere dell'opera, lunghezza del testo-->
+						<p><strong>Test corpus</strong><br />17th century French drama (36 files, X AUTHORS)<br />
 					</section>
 
 
 					<section>
-						<h3>Lexical richness</h3>
-						<p>A che percentuale corrisponde una TTR alta/bassa?</p>
-
-						<p>Dipende!</p>
+						<h2>Text preparation</h2>
+						<p>Let's say we want to prepare the text for lemmatisation and PoS-tagging and run some preliminary calculations, i.e.:</p>
 						<ul>
-							<li>Un testo di 1000 token può avere una TTR del 40% (400 parole diverse)</li>
-							<li>Uno di 3 milioni di token può avere una TTR del 5%</li>
+							<li>Number of unique words</li>
+							<li>Total number of words</li>
 						</ul>
-
-						<p>Più lungo il testo, più bassa la TTR.</p>
 					</section>
 
 
 					<section>
-						<h3>Lexical richness</h3>
-						<p>TTR adequate for texts of similar length</p>
+						<h2>Text preparation</h2>
+						<p>For our calculations and the use of many NLP tools,<br />the corpus needs to meet these requirements:</p>
+						<ul>
+							<li>TXT format</li>
+							<li>No XML markup</li>
+						</ul>
+					</section>
 
-						<p>Se i testi che si vogliono confrontare hanno lunghezze diverse, meglio calcolare la standardised TTR (STTR): si divide il testo in chunk di 1000 parole, si calcola la TTR su ogni chunk e si fa la media dei valori ottenuti.</p>
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>Download the corpus</p>
+						<ol>
+							<li>Download the corpus to a folder on the Desktop</li>
+							<li>Study the files: what to keep, remove, change? Examples:</li>
+								<ul>
+									<li>Rimozione invii a capo</li>
+									<li>Rimozione ToC</li>
+									<li>...</li>
+								</ul>
+							</ol>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<img src="./images/corpus.png" style="border: none; box-shadow: none !important; width: 800px;"/>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>Move into the corpus directory</p>
+						<br />
+						<pre><code class="nohighlight">cd Desktop/corpus</code></pre>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>Open a file</p>
+						<br />
+						<pre><code class="nohighlight">cat BOYER_AGAMEMNON.xml</code></pre>
+					</section>
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>Merge all files into a single file</p>
+						<br />
+						<pre><code class="nohighlight">cat *.xml > corpus.xml</code></pre>
+						<br />
+						<p>Open the file. What do you notice?</p>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<br />
+						<p>No whitespaces in file names!</p>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<ul>
+							<li>⇥ keyboard button to automatically complete the command</li>
+							<li>↑ and ↓ keyboard buttons to go through command history</li>
+						</ul>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>Remove all XML tags from the file</p>
+						<br />
+						<pre><code class="nohighlight">cat corpus.xml | sed 's/\<[^<>]*\>//g' > corpus.txt</code></pre>
+						<br />
+						Open the file. What do you notice?
+					</section>
+
+
+					<!--<section>
+						<h2>Text preparation</h2>
+						<br />
+						<p>Pipe symbol <code>|</code> used to concatenate commands</p>
+					</section>-->
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<br />
+						<p>More manual and/or automatic cleaning depending on our needs</p>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>Delete punctuation</p>
+						<br />
+						<pre><code class="nohighlight">cat corpus.txt | tr -d '[:punct:]'</code></pre>
+					</section>
+
+					
+					<section>
+						<h2>Text preparation</h2>
+						<p>Text as single column of words</p>
+						<br />
+						<pre><code class="nohighlight">cat corpus.txt | tr -d '[:punct:]' | tr '[:space:]' '\n'</code></pre>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>Remove blank lines</p>
+						<br />
+						<pre><code class="nohighlight">cat corpus.txt | tr -d '[:punct:]' | tr '[:space:]' '\n' | sed '/^\s*$/d'</code></pre>
+					</section>
+
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>Save the file</p>
+						<br />
+						<pre><code class="nohighlight">cat corpus.txt | tr -d '[:punct:]' | tr '[:space:]' '\n' | sed '/^\s*$/d' > corpus.txt.tokens</code></pre>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>UPPER CASE > lower case</p>
+						<br />
+						<pre><code class="nohighlight">cat corpus.txt | tr -d '[:punct:]' | tr '[:space:]' '\n' | sed '/^\s*$/d' | tr '[:upper:]' '[:lower:]'</code></pre>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>Sort words alphabetically</p>
+						<br />
+						<pre><code class="nohighlight">cat corpus.txt | tr -d '[:punct:]' | tr '[:space:]' '\n' | sed '/^\s*$/d' | tr '[:upper:]' '[:lower:]' | sort</code></pre>
+						<br />
+						<p>Reverse sort</p>
+						<pre><code class="nohighlight">sort -r</code></pre>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>Remove duplicate words</p>
+						<br />
+						<pre><code class="nohighlight">cat corpus.txt | tr -d '[:punct:]' | tr '[:space:]' '\n' | sed '/^\s*$/d' | tr '[:upper:]' '[:lower:]' | sort | uniq -c</code></pre>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>Count the number of unique words in the corpus<br />= lines in the file</p>
+						<br />
+						<pre><code class="nohighlight">cat corpus.txt | tr -d '[:punct:]' | tr '[:space:]' '\n' | sed '/^\s*$/d' | tr '[:upper:]' '[:lower:]' | sort | uniq -c | wc -l</code></pre>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<p>Count the number of unique words in the corpus<br />= lines in the file</p>
+						<br />
+						<pre><code class="nohighlight">cat corpus.txt | tr -d '[:punct:]' | tr '[:space:]' '\n' | sed '/^\s*$/d' | tr '[:upper:]' '[:lower:]' | sort | uniq -c > corpus.txt.types</code></pre>
+					</section>
+
+
+					<section>
+						<img src="./images/question.png" style="border: none; box-shadow: none !important; width: 200px;"/>
 					</section>
 
 				</section>
+
 
 				<!--*****************************************
- 				* PRATICA OVERVIEW
+ 				* PRATICA: LEMMATISATION AND POS-TAGGING
  				******************************************-->
+
+
 				<section>
+ 					<section>
+ 						<h1>TreeTagger</h1>
+ 						<h2>Lemmatisation and<br />Part-of-Speech tagging</h2>
+ 					</section>
 
-					<section> 
-						<h1>Practice</h1>
-					</section>
-				 
 
-					<section>
-						<h3>Esercizi</h3>
-						<ol>
-							<li>Calcolo della ricchezza lessicale</li>
-								<ul style="font-size: 20pt">
-									<li><em>Due alchimisti italiani</em>, Racconti storici e morali, di Cesare Cantù (1878)</li>
-								</ul>
-							<li>Pulizia di un file</li> <!-- codificare un testo e sporcarlo per questo esercizio -->
-								<ul style="font-size: 20pt">
-									<li>Testo fornito</li>
-								</ul>
-						</ol>
-					</section>
+ 					<section>
+ 						
+ 					</section>
 
-				</section>
+
+ 					<section>
+ 						
+ 					</section>
+
+
+ 					<section>
+ 						
+ 					</section>
+
+ 				</section>
+
+
 
 
 				<!--*****************************************
  				* PRATICA: CALCOLO DELLA RICCHEZZA LESSICALE
  				******************************************-->
 
+ 				
+
  				<section>
  					<section>
- 						<h1>Pratica</h1>
- 						<h2>Calcolo della ricchezza lessicale</h2>
+ 						<h1>Command line</h1>
+ 						<h2>Lexical richness</h2>
  					</section>
 					<section>
 						<h3>Calcolo della ricchezza lessicale</h3>
@@ -240,7 +350,7 @@
 
 
 					<section> 
-						<h3>E.2: Calcolo della ricchezza lessicale</h3>
+						<h3>Calcolo della ricchezza lessicale</h3>
 						<p>Minuscolizza tutto il testo:<br />
 							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;tr '[:upper:]' '[:lower:]'&nbsp;</span></p>
 
@@ -250,7 +360,7 @@
 
 
 					<section>
-						<h3>E.2: Calcolo della ricchezza lessicale</h3>
+						<h3>Calcolo della ricchezza lessicale</h3>
 						<p>Trasforma la punteggiatura in un ritorno a capo:<br />
 							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;tr '[:punct:]' '\n'&nbsp;</span></p>
 						
@@ -260,7 +370,7 @@
 
 
 					<section>
-						<h3>E.2: Calcolo della ricchezza lessicale</h3>
+						<h3>Calcolo della ricchezza lessicale</h3>
 						<p>Trasforma gli spazi in un ritorno a capo:<br />
 							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;tr '[:space:]' '\n'&nbsp;</span></p>
 						
@@ -270,7 +380,7 @@
 
 
 					<section>
-						<h3>E.2: Calcolo della ricchezza lessicale</h3>
+						<h3>Calcolo della ricchezza lessicale</h3>
 						<p>Rimuovi tutte le righe vuote:<br />
 							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;sed '/^\s*$/d'&nbsp;</span></p>
 						
@@ -280,7 +390,7 @@
 
 
 					<section>
-						<h3>E.2: Calcolo della ricchezza lessicale</h3>
+						<h3>Calcolo della ricchezza lessicale</h3>
 						<p>Salva i risultati in un nuovo file:<br />
 							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;> cantu_due-alchemisti-italiani_1878.txt.tokens&nbsp;</span></p>
 						
@@ -290,7 +400,7 @@
 
 
 					<section>
-						<h3>E.2: Calcolo della ricchezza lessicale</h3>
+						<h3>Calcolo della ricchezza lessicale</h3>
 						<p>Calcola il numero totale di token:<br />
 							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;wc -l cantu_due-alchemisti-italiani_1878.txt.tokens&nbsp;</span></p>
 						
@@ -359,21 +469,7 @@
 						<p>Cos'è una percentuale bassa/media/alta?</p>
 					</section>
 
-					<section>
-						<h3>E.2: Calcolo della ricchezza lessicale</h3>
-						<p>Quiz: qual è la ricchezza lessicale delle seguenti opere e come la spieghi?</p>
-
-						<!-- ordina per numero totale di token e aggiungi animazione-->
-						<ul>
-							<li>Vulgata (date): 7% ()</li>
-							<li>Promessi Sposi (date): 11% (225,991 token)</li>
-							<li>Sallustio (date): </li>
-							<li>Divina Commedia (date): </li>
-							<li>Le Petit Prince (date): </li>
-							<li>Faust (date):</li>
-							<li>Winnie the Pooh (date): </li>
-						</ul>
-					</section>
+					
 
 					<section>
 						<h3>E.2: Calcolo della ricchezza lessicale</h3>
@@ -391,104 +487,27 @@
 					</section>
 				</section>
 
+
 				<!--*****************************************
- 				* PRATICA: PULIZIA DI UN TESTO
+ 				* RISORSE
  				******************************************-->
 
 				<section>
 					<section>
-						<h1>Pratica</h1>
-						<h2>Text preparation</h2>
+						<h1>Resources</h1>
 					</section>
-					
 					<section>
-						<p>Poniamo di voler fare delle analisi linguistico-testuali su un testo digitalizzato disponibile online. Cosa facciamo?</p>
-						<ol>
-							<li>Scarichiamo il file</li>
-							<li>Studiamo il file: cosa tenere, cosa rimuovere, cosa cambiare?</li>
-							<li>Puliamo il più possibile in maniera automatica</li>
-							<li>Formato</li>
-						</ol>
+						<h3>Tutorials</h3>
+							<ul>
+								<li><a href="http://www.hongkiat.com/blog/basic-linux-commands/" target="_blank" title="Opens in new tab">Basic Linux commands</a></li>
+								<li><a href="http://guide.bash.academy/" target="_blank" title="Opens in new tab">Bash tutorial</a></li>
+								<li><a href="http://regexr.com/" target="_blank" title="Opens in new tab">RegexR</a></li>
+							</ul>
 					</section>
-
-					<section>
-						<h3>Text preparation</h3>
-						<p>Caso studio:	Testo (1926)
-						</p>
-					</section>
-
-
-					<section>
-						<h3>Text preparation</h3>
-						<ol>
-							<li>Scarichiamo il file</li>
-								<ul>
-									<li>https://www.fadedpage.com/showbook.php?pid=20150606</li>
-								</ul>
-							<li>Studiamo il file: cosa tenere, cosa rimuovere, cosa cambiare?</li>
-								<ul>
-									<li>Rimozione invii a capo</li>
-									<li>Rimozione ToC</li>
-									<li>...</li>
-								</ul>
-							<li>Puliamo il più possibile in maniera automatica</li>
-						</ol>
-					</section>
-
-
-					<section>
-						<h2>Removal of XML markup</h2>
-						<p>To remove all XML tags from the file:</p>
-						<br />
-						<pre><code class="nohighlight">cat filename.xml | sed 's/\<[^<>]*\>//g' > filename.txt</code></pre>
-					</section>
-
-
-					<section>
-						<h2>Tokenisation</h2>
-						<p>Dato un file di testo, produrre tokens e la loro frequenza (ordinati per frequenza decrescente)</p>
-
-						<pre><code class="nohighlight">tr 'A-Z' 'a-z' < INPUT-FILE.txt | tr -sc '[:alpha:]' '\n' | sort | uniq -c | sort -n -r > OUTPUT-FILE.txt</code></pre>
-
-						<ul style="font-size: 20pt;">
-							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;tr 'A-Z' 'a-z'&nbsp;</span> trasforma maiuscole in minuscole</li>
-							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;tr -sc '[:alpha:]' '\n'&nbsp;</span> trasforma tutto ciò che non è una lettera in un invio (new line)</li>
-							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;sort | uniq -c&nbsp;</span> elenca alfabeticamente e conta ogni type</li>
-							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;sort -n -r&nbsp;</span> elenca i conteggi (numericamente) in modo descrescente </li>
-						</ul>
-					</section>
-
-
-					<section>
-						<h2>UPPER CASE > lower case</h2>
-						<p>Per trasformare una lista di file da maiuscolo in minuscolo:</p>
-						<br />
-						<pre><code class="nohighlight">for i in $(ls | grep [A-Z]); do mv -i $i `echo $i | tr 'A-Z' 'a-z'`; done</code></pre>
-					</section>
-
-
-					<section>
-						<h2>Mixed commands</h2>
-						<ul>
-							<li><code>grep 'hello' filename</code> to extract all instances of a word in a file</li>
-							<li><code>egrep 'hello there' filename</code> to search for a specific string of text</li>
-							<li><code>tail filename</code> to return the last 10 lines of the file</li>
-							<li><code>tail -20 filename</code> to return the last 20 lines of the file</li>
-							<li><code>head filename</code> to return the first 10 lines of the file</li>
-							<li><code>head -20 filename</code> to return the first 20 lines of the file</li>
-						</ul>
-					</section>
-
-
-					<section>
-						<img src="./images/question.png" style="border: none; box-shadow: none !important; width: 200px;">
-					</section>
-
 				</section>
 
 
-				</section>
-
+				
 
 				<!--*****************************************
  				* ALTRI COMANDI
@@ -528,10 +547,14 @@
 					</section>
 
 					<section>
-						<h2>Comandi misti</h2>
+						<h2>Mixed commands</h2>
 
 						<ul>
 							<li><code>grep 'hello' filename</code> to extract all instances of a word in a file</li>
+							<li><code>\t(?=[a-z])</code>: lookahead command matching a tab that is followed by text</li>
+							<li><code>\t(?!,)</code>: lookahead command matching tabs not followed by a comma; the <code>?!</code> operator is a negation</li>
+							<li><code>(?<=[0-9])\t</code>: lookbehind command matching a tab that is preceeded by a number</li>
+							<li><code>\w*</code> matches all words/text (not numbers)</li>
 							<li><code>egrep 'hello there' filename</code> to search for a specific string of text</li>
 							<li><code>tail filename</code> to return the last 10 lines of the file</li>
 							<li><code>tail -20 filename</code> to return the last 20 lines of the file</li>
@@ -539,28 +562,13 @@
 							<li><code>head -20 filename</code> to return the first 20 lines of the file</li>
 							<li><code>top</code> to view all running processes on a machine</li>
 							<li><code>df</code> "Disk Free", to reveal amount of storage space in the current directory</li>
+							<li><code>chardetect file.txt</code> gives me the character encoding of <code>file.txt</code></li>
 						</ul>
 					</section>
 
 				</section>
 
-				<!--*****************************************
- 				* RISORSE
- 				******************************************-->
-
-				<section>
-					<section>
-						<h1>Resources</h1>
-					</section>
-					<section>
-						<h3>Tutorials</h3>
-							<ul>
-								<li><a href="http://www.hongkiat.com/blog/basic-linux-commands/" target="_blank" title="Opens in new tab">Basic Linux commands</a></li>
-								<li><a href="http://guide.bash.academy/" target="_blank" title="Opens in new tab">Bash tutorial</a></li>
-								<li><a href="http://regexr.com/" target="_blank" title="Opens in new tab">RegexR</a></li>
-							</ul>
-					</section>
-				</section>
+				
 
 
 				<!--*****************************************
@@ -568,107 +576,108 @@
  				******************************************-->
 				<section> 
 					<section>
-						<h1>Mappa dei comandi</h1>
+						<h1>Command map</h1>
+						<h2>Windows vs. Unix</h2>
 					</section>
 					<section>
 						<table style="font-size: 12pt; border: none;">
 							<tr>
 								<td style="text-align: center; text-decoration: underline; font-size: 16pt">Windows</td>
-								<td style="text-align: center; text-decoration: underline; font-size: 16pt">Descrizione</td>
-								<td style="text-align: center; text-decoration: underline; font-size: 16pt">Mac/Linux</td>
+								<td style="text-align: center; text-decoration: underline; font-size: 16pt">Description</td>
+								<td style="text-align: center; text-decoration: underline; font-size: 16pt">Unix</td>
 							</tr>
 							<tr>
 								<td><code>dir</code></td>
-								<td style="text-align: center;">Mostra contenuti</td>
+								<td style="text-align: center;">Show contents</td>
 								<td><code>ls</code></td>
 							</tr>
 							<tr>
 								<td><code style="background-color: none;">cd</code></td>
-								<td style="text-align: center;">Mostra posizione attuale</td>
+								<td style="text-align: center;">Present Working Directory</td>
 								<td><code>pwd</code></td>
 							</tr>
 							<tr>
 								<td><code>cd path/to/directory</code></td>
-								<td style="text-align: center;">Cambio directory</td>
+								<td style="text-align: center;">Change directory</td>
 								<td><code>cd path/to/directory</code></td>
 							</tr>
 							<tr>
 								<td><code>cd..</code></td>
-								<td style="text-align: center;">Indietro di una directory</td>
+								<td style="text-align: center;">Up one directory</td>
 								<td><code>cd ..</code></td>
 							</tr>
 								<td><code>cd</code></td>
-								<td style="text-align: center;">Torna alla root directory</td>
+								<td style="text-align: center;">Back to root directory</td>
 								<td><code>cd /</code></td>
 							</tr>
 							</tr>
 								<td><code>mkdir nuovaCartella</code></td>
-								<td style="text-align: center;">Crea una nuova cartella</td>
+								<td style="text-align: center;">Create new folder</td>
 								<td><code>mkdir nuovaCartella</code></td>
 							</tr>
 							</tr>
 								<td><code>echo some-text > fileName(.txt)</code></td>
-								<td style="text-align: center;">Crea un nuovo file</td>
+								<td style="text-align: center;">Create new file</td>
 								<td><code>touch fileName(.txt)</code></td>
 							</tr>
 							</tr>
 								<td><code>rmdir myFolder</code></td>
-								<td style="text-align: center;">Rimuovi una cartella*</td>
+								<td style="text-align: center;">Remove folder*</td>
 								<td><code>rmdir myFolder</code></td>
 							</tr>
 							</tr>
 								<td><code>ren oldFolderName newFolderName</code></td>
-								<td style="text-align: center;">Rinomina una cartella</td>
+								<td style="text-align: center;">Rename folder</td>
 								<td><code>mv oldFolderName newFolderName</code></td>
 							</tr>
 							</tr>
 								<td><code>robocopy myFolder path/to/destination/directory</code></td>
-								<td style="text-align: center;">Copia una cartella</td>
+								<td style="text-align: center;">Copy a folder</td>
 								<td><code>cp -r myFolder path/to/destination/directory</code></td>
 							</tr>
 							</tr>
 								<td><code>move myFolder path/to/destination/directory</code></td>
-								<td style="text-align: center;">Sposta una cartella</td>
+								<td style="text-align: center;">Move a folder</td>
 								<td><code>mv myFolder path/to/destination/directory</code></td>
 							</tr>
 							</tr>
 								<td><code>del myFile</code></td>
-								<td style="text-align: center;">Rimuovi un file*</td>
+								<td style="text-align: center;">Remove a file*</td>
 								<td><code>rm myFile</code></td>
 							</tr>
 							</tr>
 								<td><code>ren oldFileName newFileName</code></td>
-								<td style="text-align: center;">Rinomina un file</td>
+								<td style="text-align: center;">Rename a file</td>
 								<td><code>mv oldFileName newFileName</code></td>
 							</tr>
 							</tr>
 								<td><code>copy myFile path/to/destination/directory</code></td>
-								<td style="text-align: center;">Copia un file</td>
+								<td style="text-align: center;">Copy a file</td>
 								<td><code>cp myFile path/to/destination/directory</code></td>
 							</tr>
 							</tr>
 								<td><code>move myFile path/to/destination/directory</code></td>
-								<td style="text-align: center;">Sposta un file</td>
+								<td style="text-align: center;">Move a file</td>
 								<td><code>mv myFile path/to/destination/directory</code></td>
 							</tr>
 							</tr>
 								<td><code>cls</code></td>
-								<td style="text-align: center;">Pulisci la schermata</td>
+								<td style="text-align: center;">Clear screen</td>
 								<td><code>clear</code></td>
 							</tr>
 							</tr>
 								<td><code>type</code></td>
-								<td style="text-align: center;">Apri un file</td>
+								<td style="text-align: center;">Open a file</td>
 								<td><code>cat</code></td>
 							</tr>
 							</tr>
 								<td><code>type C:/../myFile.txt| find "" /v /c</code></td>
-								<td style="text-align: center;">Conta righe di un file</td>
+								<td style="text-align: center;">Count lines in a file</td>
 								<td><code>wc -l myFile(.txt)</code></td>
 							</tr>
 						</table>
 
-						<p style="font-size:12pt;">*ATTENZIONE: il comando di rimozione NON chiede conferma all'utente.</p>
+						<p style="font-size:12pt;">*NB: the delete command DOES NOT ask for confirmation.</p>
 					</section>	
 				</section>
 
