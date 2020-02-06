@@ -7,6 +7,7 @@ for **EnExDi2020**, Poitiers 10-14 February 2020. See [enexdi.sciencesconf.org](
 
 Lecturer: Greta Franzini.
 
+----
 
 ## How to install the Windows version of TreeTagger                     
 
