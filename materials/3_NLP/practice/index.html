@@ -311,19 +311,52 @@
  					</section>
 
 
- 					<section>
- 						
- 					</section>
+ 					<section> 
+						<h2>TreeTagger</h2>
+						<p>MAC, Linux e Windows:</p>
+						<ol>
+							<li>Scaricare pacchetto tree-tagger sul Desktop, estrarre lo zip e rinominare la cartella a <span style="background-color: black; color: white; font-size: 20pt; font-family: monospace">&nbsp;treetagger&nbsp;</span></li>
+							<li>Estrarre contenuti di <span style="background-color: black; color: white; font-size: 20pt; font-family: monospace">&nbsp;tagger-scripts.tar.gz&nbsp;</span></li>
+							<li>Scaricare e estrarre i due modelli italiani nella cartella <span style="background-color: black; color: white; font-size: 20pt; font-family: monospace">&nbsp;treetagger/tagger-scripts/lib&nbsp;</span></li>
+							<li>Scaricare il modello <span style="background-color: black; color: white; font-size: 20pt; font-family: monospaces">&nbsp;italian-dhante.par&nbsp;</span> dal sito CAD nella cartella <span style="background-color: black; color: white; font-size: 20pt; font-family: monospace">&nbsp;treetagger/tagger-scripts/lib&nbsp;</span></li>
+							<li>Aggiunta del parametro Dhante e Baroni</li>
+						</ol>
+					</section>
 
 
- 					<section>
- 						
- 					</section>
+					<section> 
+						<h2>TreeTagger</h2>
+						<p>Move to <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;Desktop/treetagger&nbsp;</span>.<br />Then, in MAC and Linux:</p>
+
+						<p>To tag a text with the XXXX parameter:</p>
+						<pre><code class="nohighlight">treetagger greta$ cat testo.txt | cmd/tree-tagger-italian  > testo.tagged</code></pre>
+
+						<p>Per taggare un testo con parametro Baroni:</p>
+						<pre><code class="nohighlight">treetagger greta$ cat testo.txt | cmd/tree-tagger-italian2  > testo.tagged</code></pre>
+					</section>
 
 
- 					<section>
- 						
- 					</section>
+					<section>
+						<h2>TreeTagger</h2>
+						<p>In Windows (Command Prompt):</p>
+
+						<p>Sostituire <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;cat&nbsp;</span> con <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;type&nbsp;</span>:</p>
+
+						<pre><code class="nohighlight">treetagger greta$ type testo.txt | cmd/tree-tagger-italian > testo.tagged</code></pre>
+					</section>
+
+
+					<section>
+						<h2>TreeTagger</h2>
+						<p>Sull' output di TreeTagger:</p>
+						<ul>
+							<li><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;estrai&nbsp;</span> tutti gli <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;unknown&nbsp;</span> e salvali in un file separato (grep)</li>
+							<li>ordina <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;unknown&nbsp;</span> alfabeticamente</li>
+							<li>ordina <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;unknown&nbsp;</span> per PoS (<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;sort -k 2&nbsp;</span>)</li>
+							<li>che problemi noti?</li> <!--e.g. omografia-->
+						</ul>
+					</section>
+			
 
  				</section>
 
