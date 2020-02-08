@@ -1,4 +1,4 @@
-1<!doctype html>
+<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -51,8 +51,7 @@
 				<section>
 					<h1>Theory</h1>
 					
-					<br />
-					<p style="font-size: 20pt"><span style="background-color: #c45875; color: white">&nbsp;Scuola/Evento&nbsp;</span><br />
+					<p style="font-size: 20pt"><span style="background-color: #c45875; color: white">&nbsp;Encoder, Exploiter, Diffuser: Les humanités numériques dans les projets de recherche&nbsp;</span><br />
 						<span style="color: #000000; font-size: 18pt">University of Poitiers</span><br />12th February 2020</p>
 						<p style="font-size: 18pt;">Twitter: #enexdi2020</p>
 
@@ -62,558 +61,525 @@
 					<img src="./images/unicatt-logo.png" style="border: none; box-shadow: none !important; width: 150px" />
 					
 					<aside class="notes">
-						Buongiorno a tutti, io sono Greta e questa mattina vi parlerò del Trattamento Automatico del Linguaggio (TAL). Come da sottotitolo, il corso vuole essere una introduzione al TAL, quindi quello che sentirete oggi è necessariamente una sintesi di un campo molto vasto. 
-
-						Prima di cominciare vorrei scusarmi con voi per eventuali obrobri di lingua italiana che mi sentirete pronunciare! Sono da poco rientrata in Italia dopo 12 anni vissuti all'estero e mi ci vorrà ancora un po' per riprendere confidenza con la lingua. Sono un po' arrugginita.
 					</aside>
 				</section>
 				
-
 				<section>
-					<h2>Natural Language Processing (NLP)</h2>
-					<p><span style="background-color: black; color: white">&nbsp;Natural Language Processing&nbsp;<br />&nbsp;(NLP)&nbsp;</span></p>
-				</section>
+					<section>
+						<h2>Natural Language Processing (NLP)</h2>
+					</section>
 
 
-				<section>
-					<h3>Cos'è il TAL?</h3>
-					<p class="fragment">Processo di elaborazione automatica di <span style="background-color: black; color: white">&nbsp;informazioni scritte&nbsp;</span> o <span style="background-color: black; color: white">&nbsp;parlate&nbsp;</span> in una lingua naturale</p>
-				</section>
+
+					<section>
+						<h3>NLP ≠ CL</h3>
+						<ul style="font-size: 20pt">
+							<li>Computational Linguistics: interdisciplinary field concerned with the processing of language by computers (Mitkov, 2004); develops computational <strong>methods</strong> and <strong>formalisms</strong> to answer linguistic questions</li>
+									<ul>
+										<li>Natural Language Processing: solves engineering problems arising from the analysis and generation of natural language text (written or spoken)</li>
+									</ul>
+						</ul>
+					</section>
 
 
-				<section>
-					<h3>Metodi automatici di analisi testuale</h3>
-					<p><span style="background-color: black; color: white">&nbsp;TAL + umanista&nbsp;</span></p>
 
-					<br />
-					<table>
-						<tr class="fragment">
-							<td>meccanica</td>
-							<td>+</td>
-							<td>interpretazione</td>
-						</tr>
-						<tr class="fragment">
-							<td>innovazione</td>
-							<td>+</td>
-							<td>tradizione</td>
-						</tr>
-					</table>
-				</section>
+					<section>
+						<h3>Example NLP tasks and applications</h3>
+						<ul style="font-size: 20pt">
+							<li><strong>Information Extraction</strong>: extracting names, dates, places, etc.</li>
+							<li><strong>Machine Translation</strong>: translating languages</li>
+							<li><strong>Coreference resolution</strong>: "Elena told Greta <strong>she</strong> needed to rest"</li>
+							<li><strong>Word Sense Disambiguation</strong>: "I have to buy a <strong>mouse</strong>"</li>
+							<li><strong>Sentiment Analysis/strong</strong>: automatically determine affective states/positive/negative sentiment in text (e.g. Simone's work on Goodreads reviews)</li>
+							<li><strong>Topic Modelling</strong>: discovering topics in a text/collection of texts</li>
+							<li>... and more!</li>
+						</ul>
+					</section>
 
 
-				<section> <!--historical vs. modern languages-->
-					<h3>Lingue moderne vs. antiche</h3>
-					<p><span style="background-color: black; color: white">&nbsp;Moderne&nbsp;</span></p>
+
+					<section>
+						<h3>Language technology: State of the Art</h3>
 						<ul>
-							<li class="fragment">Parlate</li>
-							<li class="fragment">Grandi gruppi d'uso</li>
-							<li class="fragment">Grande interesse commerciale</li>
+							<li class="fragment">Mostly solved:</li>
+								<ul style="font-size: 20pt;">
+									<li class="fragment"><span class="fragment">Part-of-Speech tagging</span><span class="fragment">, Named Entity Recognition</span><span class="fragment">, Spam detection</span><span class="fragment">, Spelling correction</span><span class="fragment"></li>
+								</ul>
+							<li class="fragment">In progress:</li>
+								<ul style="font-size: 20pt;">
+									<li class="fragment"><span class="fragment">Sentiment analysis</span><span class="fragment">, Machine Translation</span><span class="fragment">, Information Extraction</span><span class="fragment">, Coreference resolution</span><span class="fragment">, Syntactic parsing</span><span class="fragment">, Word Sense Disambiguation</span><span class="fragment">, Authorship Attribution</span><span class="fragment">, Gender identification</span></li>
+								</ul>
+							<li class="fragment">To solve:</li>
+								<ul style="font-size: 20pt;">
+									<li class="fragment"><span class="fragment">Dialog and Question Answering</span><span class="fragment">, Text summarisation</span><span class="fragment">, Paraphrase and allusion detection</span><span class="fragment">, and more!</span></li>
+								</ul>
 						</ul>
+					</section>
 
-					<p class="fragment"><span style="background-color: black; color: white">&nbsp;Antiche&nbsp;</span></p>
-						<ul style="text-align: left;">
-							<li class="fragment">Morte</li>
-							<li class="fragment">Piccoli gruppi d'uso: specialisti</li>
-							<li class="fragment">Poco interesse commerciale</li>
+
+
+					<section> <!--historical vs. modern languages-->
+						<h3>Language technology: State of the Art</h3>
+
+						<table style="text-align: center">
+							<tr>
+								<td><span style="background-color: black; color: white">&nbsp;Modern&nbsp;</span></td>
+								<td>&nbsp;&nbsp;&nbsp;</td>
+								<td><span style="background-color: black; color: white">&nbsp;Historical&nbsp;</span></td>
+							</tr>
+							<tr style="font-size: 20pt">
+								<td>Spoken</td>
+								<td>&nbsp;&nbsp;&nbsp;</td>
+								<td>Dead</td>
+							</tr>
+							<tr style="font-size: 20pt">
+								<td>Large user-base</td>
+								<td>&nbsp;&nbsp;&nbsp;</td>
+								<td>Small user-base</td>
+							</tr>
+							<tr style="font-size: 20pt">
+								<td>Great commercial interest</td>
+								<td>&nbsp;&nbsp;&nbsp;</td>
+								<td>Little commercial interest</td>
+							</tr>
+						</table>
+
+						<br />
+						<p class="fragment">A problem solved for a modern language is not necessarily solved for a historical language</p>
+					</section>
+					
+
+					<section>
+						<h3>Why is NLP difficult?</h3>
+						<ul style="font-size: 20pt;">
+							<li>Language ambiguity, e.g. homography, word sense</li>
+							<li>Idiomatic expressions, e.g. "bee's knees"</li>
+							<li>Neologisms, e.g. "Brangelina"</li>
+							<li>Non standard language, e.g. "4eva" or "YEEESSSS"</li>
+							<li>Tokenisation/segmentation, e.g. "new York apartment" vs. "New York apartment"</li>
+							<li>Lack of annotated/training data (especially with regard to ancient languages)</li>
 						</ul>
+					</section>
+
+
+					<section>
+						<h3>How do we solve these problems?</h3>
+						<ul style="font-size: 20pt;">
+							<li class="fragment">Language resources and data</li>
+							<li class="fragment">Rule-based methods</li>
+								<ul>
+									<li class="fragment">Rational approach (<em>intuition based</em>): human experts define rules</li>
+									<li class="fragment">Advantage: Accuracy can be very high</li>
+									<li class="fragment">Disadvantages:
+										<ul>
+											<li>Language-dependent</li>
+											<li>Building and maintaining rules is expensive</li>
+										</ul>
+								</ul>
+							<li class="fragment">Machine Learning</li>
+								<ul>
+									<li class="fragment">Empirical approach (<em>probabilistic</em>): machine autonomously learns the rules</li>
+									<li class="fragment">Advantages:</li>
+										<ul>
+											<li class="fragment">Language independent</li>
+											<li class="fragment">More automation and improvement over time</li>
+										</ul>
+									<li class="fragment">Disadvantages:</li>
+										<ul>
+											<li class="fragment">Requires lots of hand-annotated data</li>
+											<li class="fragment">Less transparent</li>
+										</ul>
+								</ul>
+							<li class="fragment">Hybrid methods: rule-based + machine learning</li>
+						</ul>
+					</section>
+
+
+					<section>
+						<h3>Language resources</h3>
+						<p style="font-size: 20pt;">"Collections of data which primarily document communicative acts of humans"<br />(<span style="font-size: 20pt"><a href="https://www.mpi.nl/ISLE/glossary/glossary_frame.html" target="_blank" title="Opens in new tab">ISLE Glossary of Terms and Abbreviations, 2000</a></span>)</p>
+
+						<ul>
+							<li class="fragment">Corpora</li>
+								<ul style="font-size: 18pt">
+									<li class="fragment">representative of a language or domain</li>
+									<li class="fragment">raw or annotated text (metadata)</li>
+									<li class="fragment">mono-/multilingual (parallel/aligned)</li>
+									<li class="fragment">written, spoken (speech audio files+transcriptions) or mixed</li>
+									<li class="fragment">synchronic, diachronic</li>
+								</ul>
+							<li class="fragment">Lexica and dictionaries</li>
+								<ul style="font-size: 18pt">
+									<li class="fragment">Thesaurus, valency lexicon, frequency lexicon, terminological lexicon, etc.</li>
+								</ul>
+							<li class="fragment">Ontologies</li>
+								<ul style="font-size: 18pt">
+									<li class="fragment">Formal representations of concepts</li>
+								</ul>
+							<li class="fragment">Grammars</li>
+						</ul>
+					</section>
+
+
+					<section>
+						<img src="./images/question.png" style="border: none; box-shadow: none !important; width: 200px;">
+					</section>
+
 				</section>
+
 
 				
 
-				<!--<section>
-					<h3>Oggi</h3>
-					<p><span style="background-color: black; color: white">&nbsp;Informazioni scritte&nbsp;</span></p>
-				</section>-->
 
 
+				<!-- PIPELINE: PREPROCESSING -->
 				<section>
-					<h3>Risorse linguistiche</h3>
-					<p>Il TAL si avvale di <span style="background-color: black; color: white">&nbsp;risorse linguistiche&nbsp;</span> = "raccolte di dati che documentano atti comunicativi umani"<br /><span style="font-size: 20pt"><a href="https://www.mpi.nl/ISLE/glossary/glossary_frame.html" target="_blank" title="Opens in new tab">ISLE Glossary of Terms and Abbreviations, 2000</a></span></p>
+					<section>
+						<h2>NLP pipeline</h2>
 
-					<ul>
-						<li class="fragment">Corpora</li>
-							<ul style="font-size: 18pt">
-								<li class="fragment">rappresentativi di una lingua o specialistici</li>
-								<li class="fragment">puro testo o annotati (metadati)</li>
-								<li class="fragment">mono-/multilingue (paralleli/allineati)</li>
-								<li class="fragment">scritti, parlati o misti</li>
-								<li class="fragment">sincronici, diacronici</li>
-							</ul>
-						<li class="fragment">Lessici e dizionari</li>
-							<ul style="font-size: 18pt">
-								<li class="fragment">Tesauri, lessici di valenza, di frequenza, terminologici, etc.</li>
-							</ul>
-						<li class="fragment">Ontologie</li>
-							<ul style="font-size: 18pt">
-								<li class="fragment">rappresentazione formale di concetti</li>
-							</ul>
-						<li class="fragment">Grammatiche</li>
-					</ul>
+						<p><i class="fas fa-exclamation-circle"></i> Textual/linguistic analysis is complex</p>
+						<p class="fragment"><i class="fas fa-lightbulb"></i> Split the task into smaller, solvable subtasks</p>
+						<br/>
+						<p class="fragment" style="text-align: left;"><span style="background-color: black; color: white">&nbsp;Pipeline&nbsp;</span>: workflow planning whereby the results of one subtask or module feed into the next subtask</p>
 
-					<aside class="notes">
-						Per poter processare una lingua in maniera automatica, la macchina si avvale di risorse liguistiche ovvero raccolte di dati che documentano atti comunicativi umani. Esistono quattro tipo di risorse linguistiche: *ELENCALE*.
-					</aside>
-				</section>
+						<p class="fragment" style="text-align: left;"><span style="background-color: black; color: white">&nbsp;One size does not fit all&nbsp;</span>: different pipelines for different needs</p>
+						<!--Un progetto può inventare il proprio sistema di pipeline o non utilizzare alcuna pipeline. Al posto di una pipeline, il progetto può utilizzare un'architettura monolitica in cui tutto è combinato in un unico grande software.-->
+
+						<!--<p>Limite: a volte è necessario un feedback da un passo successivo a uno precedente per correggere errori o ambiguità in un passo precedente. Quindi il puro design della condotta viene modificato per consentire di ripercorrere le fasi e rivedere l'output precedente, il che può essere difficile.</p>-->
+					</section>
 
 
-
-				<section>
-					<h3>Pipeline TAL</h3>
-
-					<p><i class="fas fa-exclamation-circle"></i> l'analisi testuale è complessa</p>
-					<p class="fragment"><i class="fas fa-lightbulb"></i> dividere il task di analisi in piccoli subtask risolvibili in modo indipendente da diversi specialisti</p>
-
-					<p class="fragment" style="text-align: left;"><span style="background-color: black; color: white">&nbsp;Pipeline&nbsp;</span>: modo di progettare un software per cui i risultati di un subtask o modulo alimentano il modulo successivo</p>
-
-					<p class="fragment" style="text-align: left;"><span style="background-color: black; color: white">&nbsp;One size does not fit all&nbsp;</span>: diverse pipeline per diverse esigenze</p>
-					<!--Un progetto può inventare il proprio sistema di pipeline o non utilizzare alcuna pipeline. Al posto di una pipeline, il progetto può utilizzare un'architettura monolitica in cui tutto è combinato in un unico grande software.-->
-
-					<!--<p>Limite: a volte è necessario un feedback da un passo successivo a uno precedente per correggere errori o ambiguità in un passo precedente. Quindi il puro design della condotta viene modificato per consentire di ripercorrere le fasi e rivedere l'output precedente, il che può essere difficile.</p>-->
-				</section>
-
-
-				<section>
-					<h3>Pipeline TAL</h3>
-					<ul>
-						<!--<li>Language detection</li>-->
-						<li>Tokenizzazione</li>
-						<li>PoS-tagging e lemmatizzazione</li> 
-						<li>Analisi morfologica</li>
-						<!--<li>Stemming</li>-->
-						<li>Named Entity Recognition (NER)</li>
-						<!--<li>Term, concept and entity extraction</li>-->
-						<li>Parsing sintattico</li>
-						<li>Parsing semantico</li>
-						<li>...</li>
-					</ul>	
-					
-    				<img src="./images/nlp-pipeline.png" style="border: none; box-shadow: none !important; width: 800px;">
-    				<aside class="notes">
-    					Questa che vedete è una pipeline generica. Come già detto i moduli possono essere più o meno granulari. Solitamente si parte con la tokenizzazione ma in alcune pipeline questa viene preceduta, per esempio, dal "Language detection". Altri moduli che si potrebbero aggiungere qui, per esempio, sono l'analisi della metrica o lo stemming (processo di riduzione della forma flessa di una parola alla sua forma radice, detta tema.)
-    					Prima di approfondire questi moduli però è necessario parlare di preprocessing, il primo passo in qualsiasi progetto di analisi testuale. Cos'è il preprocessing?
-    				</aside>
-				</section>
-
-
-				<section>
-					<h3>Preprocessing: preparazione dati</h3>
-					<p><span style="background-color: black; color: white">&nbsp;Garbage in, garbage out&nbsp;</span></p>
-
-					<blockquote style="font-size: 16pt;">It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data [...]. Data preparation is not just a first step, but must be repeated many times over the course of analysis as new problems come to light or new data is collected.</blockquote> <a href="http://vita.had.co.nz/papers/tidy-data.html" target="_blank" title="Opens in new tab">Hadley Wickham, 2014</a>
-				</section>
-
-
-				<section>
-					<!--<h3>Preprocessing: preparazione dati</h3>-->
-					<a href="https://twitter.com/StuartEDunn/status/1157398880541138944?s=09" target="_blank" title="Opens in new tab"><img src="./images/data-analysis-tweet.png"  style="border: none; box-shadow: none !important; width: 470px"/></a>
-				</section>
-					
-
-				<section> <!--preparazione testi-->
-					<h3>Preprocessing: preparazione dati</h3>
-					<p><span style="background-color: black; color: white">&nbsp;Formato&nbsp;</span></p>
-					<img src="./images/txt-icon.png" style="border: none; box-shadow: none !important; width: 200px;">
-					<p>Plain Text</p>
-				</section>
-
-				<section>
-					<img src="./images/question.png" style="border: none; box-shadow: none !important; width: 200px;">
-					<aside class="notes">Ci sono domande o dubbi?</aside>
-				</section>
-
-				<section>
-					<h2>Pipeline TAL</h2>
-					<img src="./images/nlp-pipeline.png" style="border: none; box-shadow: none !important; width: 800px;">
-					<aside class="notes">Vediamo ora insieme alcuni dei moduli che compongono una pipeline di TAL. Oggi approfondiremo la tokenizzazione, il PoS-tagging e la lemmatizzazione, operazioni che stanno alla base di molte analisi testuali sintattiche e semantiche. Non affronteremo sintassi e semantica perché analisi sono più complesse e richiederebbero una summer school a parte!</aside>
-				</section>
-
-
-			<section> <!-- TOKENIZZAZIONE -->
-				<section>
-					<h3>Tokenizzazione</h3>
-					<img src="./images/nlp-pipeline-tokeniser.png" style="border: none; box-shadow: none !important; width: 800px;">
-					<p class="fragment">Suddivisione del testo in <span style="background-color: black; color: white">&nbsp;token&nbsp;</span>, i.e. unità di analisi:<br />caratteri, parole, frasi, etc.</p>
-
-					<br />
-					<p class="fragment">Solitamente tokenizzazione per <span style="background-color: black; color: white">&nbsp;parola&nbsp;</span></p>
-				</section>
-
-
-				<section>
-					<h3>Tokenizzazione</h3>
-					<p><span style="background-color: black; color: white">&nbsp;Token ≠ parola&nbsp;</span></p>
-					<br />
-					<p class="fragment">"mangiarmelo"<br />=<br />1 token, 3 parole morfologiche</p>
-
-
-					<aside class="notes">
-						Mangiare = verbo; me = pronome; lo = pronome.
+					<section>
+						<h2>NLP pipeline</h2>
+						<ul>
+							<li>Language detection</li>
+							<li>Tokenisation</li>
+							<li>PoS-tagging and lemmatisation</li> 
+							<li>Morphological analysis</li>
+							<li>Stemming</li>
+							<li>Named Entity Recognition (NER)</li>
+							<li>Term, concept and entity extraction</li>
+							<li>Syntactic parsing</li>
+							<li>Semantic parsing</li>
+							<li>...</li>
+						</ul>	
 						
-					</aside>
-				</section>
+	    				<img src="./images/nlp-pipeline.png" style="border: none; box-shadow: none !important; width: 800px;">
+					</section>
 
 
-				<section>
-					<h3>Tokenizzazione</h3>
+					<section>
+						<h2>Preprocessing</h2>
+						<p><span style="background-color: black; color: white">&nbsp;Garbage in, garbage out&nbsp;</span></p>
 
-					<ul>
-						<li><span style="background-color: black; color: white">&nbsp;Type&nbsp;</span>: un lemma, un tipo di token</li>
-							<ul class="fragment">
-								<li>Dizionario = insieme di type</li>
-							</ul>
-						<li class="fragment"><span style="background-color: black; color: white">&nbsp;Token&nbsp;</span>: occorrenza di un type in un testo</li>
-					</ul>
-
-					<br /><br />
-
-					<p class="fragment">"Se oggi seren non è doman seren sarà se non sarà seren si rasserenerà"</p>
-					<p class="fragment">Token: 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type: 9</p>
-				</section>
+						<blockquote style="font-size: 16pt;">It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data [...]. Data preparation is not just a first step, but must be repeated many times over the course of analysis as new problems come to light or new data is collected.</blockquote> <a href="http://vita.had.co.nz/papers/tidy-data.html" target="_blank" title="Opens in new tab">Hadley Wickham, 2014</a>
+					</section>
 
 
-				<section>
-					<h3>Tokenizzazione</h3>
-					<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Hmmm...&nbsp;</span><p>
-
-					<p>"La Spezia"</p>
-					<p>1 o 2 token?
-
-					<br /><br />
-					<p class="fragment">U.S.A. &middot; ad hoc &middot; Milano-Verona &middot; l’onda &middot; 18.07.2019</p>
-
-					<p class="fragment">Normalizzazione</p>
-
-					<aside class="notes">
-						Per Information Retrieval (e.g. Text reuse e altre operazioni) occorre normalizzare il testo.
-					</aside>
-				</section>
-
-
-				<section> <!-- quality control-->
-					<h2>Verifica dei dati!</h2>
-					<img src="./images/detective.png" style="border: none; box-shadow: none !important; width: 200px">
-				</section>
-			</section>
-
-
-			<section> <!-- POS TAGGING E LEMMATIZZAZIONE -->
-
-				<section> <!--pos tagging, part 1-->
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<img src="./images/nlp-pipeline-tagger.png" style="border: none; box-shadow: none !important; width: 800px;">
-					<p class="fragment" style="text-align: left;"><span style="background-color: black; color: white">&nbsp;PoS-tagging&nbsp;</span>: etichettatura linguistica (PoS = Part of Speech)</p>
-					<p class="fragment" style="text-align: left;"><span style="background-color: black; color: white">&nbsp;Lemmatizzazione&nbsp;</span>: riduzione di una forma flessa di una parola alla sua forma canonica, detta <em>lemma</em> (previo PoS-tagging)</p>
-				</section>
-
-
-				<section>
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<p style="text-align: left;"><span style="background-color: black; color: white">&nbsp;Tagset&nbsp;</span>: insieme chiuso (<em>set</em>) di etichette (<em>tag</em>) delle parti del discorso usato per annotare il testo</p>
-
-					<ul class="fragment">
-						<li class="fragment">Parti del discorso:</li>
-							<ul class="fragment" style="font-size: 20pt;">
-								<li>sostantivo, verbo, aggettivo, avverbio, articolo, pronome, preposizione, congiunzione, interiezione</li>
-							</ul>
-						<li class="fragment">Parti variabili del discorso:</li>
-							<ul class="fragment" style="font-size: 20pt;">
-								<li>nome comune/proprio, aggettivo dimostrativo, pronome personale/relativo, etc.</li>
-							</ul>
-					</ul>
-				</section>
-
-				<section>
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Diversi tagset&nbsp;</span></p>
-					=<br />Problema di interoperabilità</p>
-					<br />
-					<p class="fragment"><i class="fas fa-lightbulb"></i> <span style="background-color: black; color: white">&nbsp;Standard&nbsp;</span>: <a href="https://universaldependencies.org/u/pos/" target="_blank" title="Opens in new tab">Universal Dependencies</a> (17 tag)</p>
-				</section>
-
-
-				<section>
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<p><span style="background-color: black; color: white">&nbsp;Metodi&nbsp;</span></p>
-
-					<ul>
-						<li class="fragment"><em>Rule-based</em></li>
-							<ul class="fragment" style="font-size: 20pt;">
-								<li>Approccio razionalista (<em>intuition based</em>), segue delle regole (<em>supervised</em>)</li>
-								<li>Language-dependent</li>
-								<li>Molto usato fino agli anni '90</li>
-							</ul>
-						<li class="fragment"><em>Data-driven</em></li>
-							<ul class="fragment" style="font-size: 20pt;">
-								<li>Approccio empirista (<em>probabilistic</em>), impara le regole (<em>unsupervised</em>)</li>
-								<li>Language independent</li>
-								<li>Preso piede dalla seconda metà degli anni '90</li>
-								<li>Si avvale di dati annotati</li>
-							</ul>
-						<li class="fragment">Ibrido</li>
-							<ul class="fragment" style="font-size: 20pt;">
-								<li>TreeTagger</li>
-							</ul>
-					</ul>
-				</section>
-
-
-
-				<section> <!--intro a treetagger -->
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<h4><i class="fas fa-tags"></i> <a href="http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/" target="_blank" title="Opens in new tab">TreeTagger</a> </h4>
-					<ul>
-						<li class="fragment">Tagger fra i più utilizzati</li>
-						<li class="fragment">Supporto per molte lingue, moderne e antiche</li>
-						<li class="fragment">Modelli statistici addestrati (<em>parameter files</em>) gli permettono di stimare la probabilità di transizione da un PoS all'altro</li>
-						<!--<li>Binary decision tree</li>-->
-					</ul>
-					<br />
-					<!--<p class="fragment">Perché TreeTagger e non altri PoS-tagger?</p>
-					<p class="fragment">Intuitivo, performante.</p>-->
-				</section>
-
-
-				<section> <!--intro a treetagger -->
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<p>Cosa vuol dire addestrare un modello TreeTagger:</p>
-					<ul>
-						<li>Di che file ha bisogno in input (vedi sito)</li>
-							<ul>
-								<li>Corpus annotato con PoS e lemma</li>
-								<li>Lessico (dizionario)</li>
-								<li>Tagset</li>
-							</ul>
-						<li>What the output looks like</li>
+					<section>
+						<a href="https://twitter.com/StuartEDunn/status/1157398880541138944?s=09" target="_blank" title="Opens in new tab"><img src="./images/data-analysis-tweet.png"  style="border: none; box-shadow: none !important; width: 470px"/></a>
+					</section>
 						
-					</ul>
-				</section>
 
-				<section> <!--pos tagging, part 2-->
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Diversi modelli e tagset&nbsp;</span><p>
+					<section> <!--preparazione testi-->
+						<h2>Preprocessing</h2>
+						<p><span style="background-color: black; color: white">&nbsp;Format&nbsp;</span></p>
+						<img src="./images/txt-icon.png" style="border: none; box-shadow: none !important; width: 200px;">
+						<p>Plain Text</p>
+					</section>
 
-					<p style="font-size: 18pt">"I sensali schioccavan le fruste;"</p>
-					<p style="font-size: 11pt; margin-top: -10px">(Adolfo Albertazzi, <em>Il camiciotto rosso</em>, 1918)</p>
-					
-					<div class="container" style="margin: 0 auto; width: 100%;">
-						<div class="row">
-							<div class="col-lg-6">
-								<p class="fragment">TreeTagger <span style="background-color: #c45875; color: white">&nbsp;Stein&nbsp;</span> - 38 tag</p>
-									<pre class="fragment"><code class="nohighlight">I	DET:def	il
-									sensali	NOM	sensale
-									schioccavan	VER:impf	schioccare
-									le	DET:def	il
-									fruste	NOM	frusta
-									;	PON	;</code></pre>
-							</div>
-							<div class="col-lg-6">
-								<p class="fragment">TreeTagger <span style="background-color: #c45875; color: white">&nbsp;Baroni&nbsp;</span> - 52 tag</p>
-									<pre class="fragment"><code class="nohighlight">I	ART	il
-									sensali	NOUN	sensale
-									schioccavan	VER:fin	schioccare
-									le	ART	la
-									fruste	NOUN	frusta
-									;	PUN	;</code></pre>
-							</div>
-						</div>
-					</div>
+					<section>
+						<img src="./images/question.png" style="border: none; box-shadow: none !important; width: 200px;">
+					</section>
 				</section>
 
 
-				<section> <!--pos tagging, part 3-->
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Ambiguità&nbsp;</span><p>
-
-					<div class="container" style="margin: 0 auto; width: 100%;">
-						<div class="row">
-							<div class="col-lg-6">
-								<p class="fragment">TreeTagger (Stein)</p>
-									<pre class="fragment"><code class="nohighlight">alcuni	PRO:indef	alcun|alcuni</code></pre>
-							</div>
-							<div class="col-lg-6">
-								<p class="fragment">TreeTagger (Baroni)</p>
-									<pre class="fragment"><code class="nohighlight">alcuni	DET:indef	alcun</code></pre>
-							</div>
-						</div>
-					</div>
-				</section>
-
-
-				<section> <!--pos tagging, part 4-->
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					
-					<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Unknown&nbsp;</span><p>
-
-					<p><span style="background-color: #c45875; color: white">&nbsp;Possibili motivi&nbsp;</span>: token non riconosciuto, tokenizzazione problematica, sporcizia nel testo (e.g., OCR), ...</p>
-				
-					<p class="fragment">TreeTagger (Stein)</p>
-
-					<div class="container" style="margin: 0 auto; width: 100%;">
-						<div class="row">
-							<div class="col-lg-6">
-								<p class="fragment" style="font-size: 18pt;">"l' ombra del giqante"</p>
-									<pre class="fragment"><code class="nohighlight">l	VER:impe	&lt;unknown&gt;
-									'	PON	'
-									ombra	NOM	ombra
-									del	PRE:det	del
-									giqante	NOM	&lt;unknown&gt;</code></pre>
-							</div>
-
-							<div class="col-lg-6">
-								<p class="fragment" style="font-size: 18pt;">"l'ombra del gigante"</p>
-									<pre class="fragment"><code class="nohighlight">l'	DET:def	il
-								ombra	NOM	ombra
-								del	PRE:det	del
-								gigante	NOM	gigante</code></pre>	
-							</div>
-							
-						</div>
-					</div>
-				</section>
-
-
-				<section> 
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Omografia&nbsp;</span><p>
-					<p>Un lemma può avere più PoS</p>
-					<br />
-					<p>TreeTagger (Stein). Fuori contesto:</p>
-					<div class="container" style="margin: 0 auto; width: 100%;">
-						<div class="row">
-							<div class="col-lg-12">
-								<p class="fragment" style="font-size: 18pt">"faccia"</p>
-									<pre class="fragment"><code class="nohighlight">faccia	NOM	faccia</code></pre>
-							</div>
-						</div>
-					</div>
-				</section>
-
-
-				<section> 
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Omografia&nbsp;</span><p>
-					<br />
-					<p>TreeTagger (Stein). In contesto:</p>
-
-					<div class="container" style="margin: 0 auto; width: 100%;">
-						<div class="row">
-							<div class="col-lg-6">
-								<p class="fragment" style="font-size: 18pt">"Ha una brutta <span style="background-color: #c45875; color: white">&nbsp;faccia&nbsp;</span>"</p>
-									<pre class="fragment"><code class="nohighlight">Ha	VER:pres	avere
-									una	DET:indef	una
-									brutta	ADJ	brutto
-									faccia	NOM	faccia</code></pre>
-							</div>
-							<div class="col-lg-6">
-								<p class="fragment" style="font-size: 18pt">"Non so come lei <span style="background-color: #c45875; color: white">&nbsp;faccia&nbsp;</span>"</p>
-									<pre class="fragment"><code class="nohighlight">Non	ADV	non
-									so	VER:pres	sapere
-									come	CON	come
-									lei	PRO:pers	lei
-									faccia	VER:cpre	fare</code></pre>
-							</div>
-						</div>
-					</div>
-				</section>
-	
-
-				<section> 
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Omografia&nbsp;</span><p>
-					<br />
-					<p>TreeTagger (Stein). Attenzione però! Sempre in contesto:</p>
-
-					<div class="container" style="margin: 0 auto; width: 100%;">
-						<div class="row">
-							<div class="col-lg-12">
-								<p class="fragment" style="font-size: 18pt">"Non so come <span style="background-color: #c45875; color: white">&nbsp;faccia&nbsp;</span>"</p>
-									<pre class="fragment"><code class="nohighlight">Non	ADV	non
-									so	VER:pres	sapere
-									come	PRE	come
-									faccia	NOM	faccia</code></pre>
-							</div>
-						</div>
-					</div>
-				</section>
-
-
+				<!-- PIPELINE -->
 				<section>
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Omografia&nbsp;</span><p>
-					<br />
-					<p>TreeTagger (Stein). E ancora in contesto:</p>
-					
-					<div class="container" style="margin: 0 auto; width: 100%;">
-						<div class="row">
-							<div class="col-lg-12">
-								<p class="fragment" style="font-size: 18pt">"non so con che <span style="background-color: #c45875; color: white">&nbsp;faccia&nbsp;</span> <span style="background-color: #c45875; color: white">&nbsp;faccia&nbsp;</span> questa domanda"</p>
-									<pre class="fragment"><code class="nohighlight">non	ADV	non
-									so	VER:pres	sapere
-									con	PRE	con
-									che	PRO:rela	che
-									faccia	VER:cpre	fare
-									faccia	VER:cpre	fare
-									questa	PRO:demo	questo
-									domanda	VER:pres	domandare</code></pre>
-							</div>
-						</div>
-					</div>
+					<section>
+						<h2>NLP pipeline</h2>
+						<img src="./images/nlp-pipeline.png" style="border: none; box-shadow: none !important; width: 800px;">
+						<aside class="notes"></aside>
+					</section>
 				</section>
-					
 
 
+
+				<!-- TOKENIZZAZIONE -->
 				<section>
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Performance&nbsp;</span><p>
+					<section>
+						<h3>Tokenisation</h3>
+						<img src="./images/nlp-pipeline-tokeniser.png" style="border: none; box-shadow: none !important; width: 800px;">
+						<p class="fragment">Splitting texts into <span style="background-color: black; color: white">&nbsp;tokens&nbsp;</span>, i.e. small units of analysis:<br />characters, words, sentences, etc.</p>
 
-					<p>Alcuni strumenti e modelli più performanti di altri</p>
+						<br />
+						<p class="fragment">Typically: <span style="background-color: black; color: white">&nbsp;word level tokenisation&nbsp;</span></p>
+					</section>
 
-					<div class="container" style="margin: 0 auto; width: 100%;">
-						<div class="row">
-							<div class="col-lg-6">
-								<p class="fragment">TreeTagger (Stein)</p>
-									<pre class="fragment"><code class="nohighlight">finché	CON	finché</code></pre>
-									<pre class="fragment"><code class="nohighlight">finchè	CON	finchè</code></pre>
-							</div>
-							<div class="col-lg-6">
-								<p class="fragment">TreeTagger (Baroni)</p>
-									<pre class="fragment"><code class="nohighlight">finché	CON	finché</code></pre>
-									<pre class="fragment"><code class="nohighlight">finchè	VER:fin	&lt;unknown&gt;</code></pre>
-							</div>
-						</div>
-					</div>
+
+					<section>
+						<h3>Tokenisation</h3>
+						<p><span style="background-color: black; color: white">&nbsp;Token ≠ word&nbsp;</span></p>
+						<br />
+						<p class="fragment">"mangiarmelo"<br />=<br />1 token, 3 morphological words</p>
+						<aside class="notes">
+							Mangiare = verb; me = pronoun; lo = pronoun.
+						</aside>
+					</section>
+
+
+					<section>
+						<h3>Tokenisation</h3>
+						<ul>
+							<li><span style="background-color: black; color: white">&nbsp;Type&nbsp;</span>: unique word, element of the vocabulary</li>
+								<ul class="fragment">
+									<li>Dictionary = list of types</li>
+								</ul>
+							<li class="fragment"><span style="background-color: black; color: white">&nbsp;Token&nbsp;</span>: occurrence/instance of a type in running text</li>
+								<ul class="fragment">
+									<li>Text = list of tokens</li>
+								</ul>
+						</ul>
+						<br /><br />
+						<p class="fragment">"The cat is on the table"</p>
+						<p class="fragment">Tokens: 6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Types: 5</p>
+					</section>
+
+
+					<section>
+						<h3>Tokenisation</h3>
+						<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Hmmm...&nbsp;</span><p>
+
+						<p>"New York"</p>
+						<p>1 or 2 tokens?
+
+						<br />
+						<p class="fragment">U.S.A. &middot; ad hoc &middot; Milano-Verona &middot; l'ensemble &middot; 18.07.2019 &middot; das Fingerspitzengefühl</p>
+
+						<br />
+						<p class="fragment">scriptura continua?</p>
+
+
+						<br />
+						<p class="fragment">Tokenisation is not a trivial task</p>
+						<!--<p class="fragment">Normalisation</p>-->
+
+						<aside class="notes">
+							Fingerspitzengefühl: literally "the fingertip feeling". Compound splitting
+						</aside>
+					</section>
+
+
+					<section>
+						<h2>Check the data</h2>
+						<img src="./images/detective.png" style="border: none; box-shadow: none !important; width: 200px">
+					</section>
 				</section>
 
 
-				<section>
-					<h3>PoS-tagging e lemmatizzazione</h3>
-					<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Dominio&nbsp;</span><p>
-
-					<p class="fragment">Un tagger addestrato sull'italiano di Dante (XIII sec.) non è adatto all'analisi di italiano contemporaneo e viceversa</p>
-
-					<ul class="fragment">Esempio sull'italiano di Dante (XIII sec.):
-						<li class="fragment">TextPro addestrato su <span style="background-color: black; color: white">&nbsp;italiano contemporaneo&nbsp;</span> raggiunge un'accuratezza del 72%</li>
-						<li class="fragment">TreeTagger e Stanford CoreNLP addestrati su <span style="background-color: black; color: white">&nbsp;italiano delle origini&nbsp;</span> raggiungono accuratezze del 90% e 92% rispett. (<a href="http://www.lrec-conf.org/proceedings/lrec2016/summaries/412.html" target="_blank" title="Opens in new tab">Basile e Sangati, 2016</a>)</li>
-					</ul>
-				</section>
-			</section>
-
-
-			<section> <!-- ANALISI MORFOLOGICA-->
+				<!-- POS TAGGING AND LEMMATISATION -->
 				<section> 
-					<h3>Analisi morfologica</h3>
+					<section> <!--pos tagging, part 1-->
+						<h3>PoS-tagging and lemmatisation</h3>
+						<img src="./images/nlp-pipeline-tagger.png" style="border: none; box-shadow: none !important; width: 800px;">
+						<p class="fragment" style="text-align: left;"><span style="background-color: black; color: white">&nbsp;PoS-tagging&nbsp;</span>: linguistic labelling (PoS = Part of Speech)</p>
+						<p class="fragment" style="text-align: left;"><span style="background-color: black; color: white">&nbsp;Lemmatisation&nbsp;</span>: reducing an inflected form to its base form, known as <em>lemma</em></p>
+					</section>
+
+
+					<section>
+						<h3>PoS-tagging and lemmatisation</h3>
+						<p style="text-align: left;"><span style="background-color: black; color: white">&nbsp;Tagset&nbsp;</span>: closed set of part-of-speech labels (<em>tags</em>) used to annotate a text</p>
+
+						<ul class="fragment">
+							<li class="fragment">Parts of speech:</li>
+								<ul class="fragment" style="font-size: 20pt;">
+									<li>noun, verb, adjective, adverb, pronoun, preposition, conjunction, interjection</li>
+								</ul>
+						</ul>
+					</section>
+
+
+					<section>
+						<h3>PoS-tagging and lemmatisation</h3>
+						<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Different tagset&nbsp;</span></p>
+						=<br />Interoperability problem</p>
+						<br />
+						<p class="fragment"><i class="fas fa-lightbulb"></i> <span style="background-color: black; color: white">&nbsp;Standard&nbsp;</span>: <a href="https://universaldependencies.org/u/pos/" target="_blank" title="Opens in new tab">Universal Dependencies</a> (17 tags)</p>
+					</section>
+
+
+					<section>
+						<h3>PoS-tagging and lemmatisation</h3>
+						<p><span style="background-color: black; color: white">&nbsp;Methods&nbsp;</span></p>
+
+						<ul>
+							<li class="fragment"><em>Rule-based</em></li>
+								<ul class="fragment" style="font-size: 20pt;">
+									<li>Heavily used until the 1990s</li>
+								</ul>
+							<li class="fragment"><em>Data-driven</em></li>
+								<ul class="fragment" style="font-size: 20pt;">
+									<li>Popular from the mid 1990s</li>
+								</ul>
+							<li class="fragment">Hybrid</li>
+								<ul class="fragment" style="font-size: 20pt;">
+									<li>TreeTagger</li>
+								</ul>
+						</ul>
+					</section>
+
+
+					<section> <!--intro a treetagger -->
+						<h3>PoS-tagging and lemmatisation</h3>
+						<h4><i class="fas fa-tags"></i> <a href="http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/" target="_blank" title="Opens in new tab">TreeTagger</a> </h4>
+						<ul>
+							<li class="fragment">Very popular</li>
+							<li class="fragment">Support for many languages, both modern and historical</li>
+							<li class="fragment">Trained statistical models (<em>parameter files</em>) allow it to calculate the probability of transition from one PoS to another</li>
+							<!--<li>Binary decision tree</li>-->
+						</ul>
+						<br />
+						<!--<p class="fragment">Perché TreeTagger e non altri PoS-tagger?</p>
+						<p class="fragment">Intuitivo, performante.</p>-->
+					</section>
+
+
+					<section> <!--intro a treetagger -->
+						<h3>PoS-tagging and lemmatisation</h3>
+						<p>Training a TreeTagger model</p>
+						<ul>
+							<li>Requirements:</li>
+								<ul>
+									<li>Corpus annotated with PoS and lemma</li>
+									<li>Lexicon (dictionary)</li>
+									<li>Tagset</li>
+								</ul>
+						</ul>
+					</section>
+
+
+					<section> <!--pos tagging, part 2-->
+						<h3>PoS-tagging and lemmatisation</h3>
+						<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Different models and tagsets&nbsp;</span><p>
+
+						<p style="font-size: 18pt">"Il n'est plus! Ô disgrâce à jamais déplorable!"</p>
+						<p style="font-size: 11pt; margin-top: -10px">(Claude Boyer - <em>Agamenon, Tragédie</em> - 1648)</p>
+						
+						<div class="container" style="margin: 0 auto; width: 100%;">
+							<div class="row">
+								<div class="col-lg-6">
+									<p class="fragment"><span style="background-color: #c45875; color: white">&nbsp;French&nbsp;</span> - 33 tags</p>
+										<pre class="fragment"><code class="nohighlight">Il	PRO:PER	il
+										n'	ADV	ne
+										est	VER:pres	être
+										plus	ADV	plus
+										!	SENT	!
+										Ô	INT	ô
+										disgrâce	NOM	disgrâce
+										à	PRP	à
+										jamais	ADV	jamais
+										déplorable	ADJ	déplorable
+										!	SENT	!</code></pre>
+								</div>
+								<div class="col-lg-6">
+									<p class="fragment"><span style="background-color: #c45875; color: white">&nbsp;Old French&nbsp;</span> - 55 tags</p>
+										<pre class="fragment"><code class="nohighlight">Il	PROper	il
+										n'	ADVneg	ne
+										est	VERcjg	estre
+										plus	ADVgen	plus
+										!	PONfrt	!
+										Ô	VERppe	&lt;unknown&gt;
+										disgrâce	VERcjg	&lt;unknown&gt;
+										à	PRE	à
+										jamais	ADVgen	jamais
+										déplorable	NOMcom	&lt;unknown&gt;
+										!	PONfrt	!</code></pre>
+								</div>
+							</div>
+						</div>
+					</section>
+
+
+					<section> <!--pos tagging, part 3-->
+						<h3>PoS-tagging and lemmatisation</h3>
+						<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Ambiguity&nbsp;</span><p>
+
+						<br />
+						<div class="container" style="margin: 0 auto; width: 100%;">
+							<div class="row">
+								<div class="col-lg-6">
+										<pre class="fragment"><code class="nohighlight">maîtresse	NOM	maître|maîtresse</code></pre>
+								</div>
+								<div class="col-lg-6">
+										<pre class="fragment"><code class="nohighlight">sommes	VER:pres	sommer|être</code></pre>
+								</div>
+							</div>
+						</div>
+					</section>
+
+
+					<section> <!--pos tagging, part 4-->
+						<h3>PoS-tagging and lemmatisation</h3>
+						
+						<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Unknown&nbsp;</span><p>
+
+						<p><span style="background-color: #c45875; color: white">&nbsp;Possible reasons&nbsp;</span>: unrecognised tokens, problematic tokenisation, dirty text (e.g., OCR), ...</p>	
+					</section>
+
+
+					<section> 
+						<h3>PoS-tagging and lemmatisation</h3>
+						<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Homography&nbsp;</span><p>
+						<p>A lemma can have more than one PoS</p>
+						<br />
+						<div class="container" style="margin: 0 auto; width: 100%;">
+
+							<div class="row">
+								<div class="col-lg-6">
+									<p class="fragment" style="font-size: 18pt"><span style="background-color: #c45875; color: white">&nbsp;lis&nbsp;</span></p>
+										<pre class="fragment"><code class="nohighlight">lis	NOM	li|lis</code></pre>
+								</div>
+								<div class="col-lg-6">
+									<p class="fragment" style="font-size: 18pt">Tu <span style="background-color: #c45875; color: white">&nbsp;lis&nbsp;</span> le livre</p>
+										<pre class="fragment"><code class="nohighlight">tu	PRO:PER	tu
+										lis	VER:pres	lire
+										le	DET:ART	le
+										livre	NOM	livre</code></pre>
+								</div>
+							</div>
+						
+						</div>
+					</section>
+					
+
+
+					<section>
+						<h3>PoS-tagging and lemmatisation</h3>
+						<p><i class="fas fa-exclamation-circle"></i> <span style="background-color: black; color: white">&nbsp;Domain&nbsp;</span><p>
+						<p class="fragment">A tagger trained on medieval French is not suitable to tag modern French and viceversa</p>
+					</section>
+				</section>
+
+
+
+			<!--MORPHOLOGICAL ANALYSIS-->
+			<section>
+				<section> 
+					<h3>Morphological analysis</h3>
 					<img src="./images/nlp-pipeline-tagger.png" style="border: none; box-shadow: none !important; width: 800px;">
-					<p>PoS-tagging può estendersi ai tratti morfologici</p>
+					<p>PoS-tagging can extend to morphological traits</p>
 
-					<p class="fragment">L'analisi morfologica assegna tratti morfologici alle forme:</p>
+					<p class="fragment">Morphological analysis assigns morphological traits to word forms:</p>
 					<ul style="font-size: 20pt;" class="fragment">
 						<li>PoS</li>
-						<li>genere, numero, persona, modo, tempo, caso, grado, diatesi, etc.</li>
+						<li>gender, number, person, mood, tense, case, degree, etc.</li>
 					</ul>
 				</section>
 
+
 				<section>
-					<h3>Analisi morfologica</h3>
+					<h3>Morphological analysis</h3>
 					<p>E.g. <a href="http://perunaenciclopediadantescadigitale.eu:8080/dantesearch/" target="_blank" title="Opens in new tab">DanteSearch corpus</a>: 2882 tag!</p>
 
 					<div style="width:40%;height:0;padding-bottom:30%;padding-left:22%;position:relative;"><iframe src="https://giphy.com/embed/fpXxIjftmkk9y" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/fpXxIjftmkk9y" style="font-size: 15pt">via GIPHY</a></p>
@@ -621,81 +587,107 @@
 			</section>
 
 
+			<!--NER-->
+			<section>
+				<section>
+					<h3>Named Entity Recognition<br />(NER)</h3>
+				</section>
+
 
 				<section> <!--named entity recognition-->
 					<h3>Named Entity Recognition (NER)</h3>
 					<img src="./images/nlp-pipeline-ner.png" style="border: none; box-shadow: none !important; width: 800px;">
-					<p class="fragment">Processo di identificazione o estrazione di entità volto a trovare e classificare ogni elemento presente in un testo in categorie predefinite, e.g., persone, organizzazioni, luoghi, eventi, quantità, valute monetarie, percentuali, etc.</p>
-
-					<p class="fragment">Si avvale di tokenizzazione, POS tagging, regole per l’uso delle maiuscole e altre funzioni TAL.</p>
+					<p class="fragment">Identification and extraction of entities into categories, e.g., people, institutions, places, events, quantities, percentages, etc.</p>
 
 					<!--<p>Named Entity Disambiguation (NED)</p>-->
 				</section>
+			</section>
 
 
-			<section> <!-- PARSING SINTATTICO -->
+
+			<!-- SYNTAX -->
+			<section> 
 				<section> <!--dependency parsing-->
-					<h3>Parsing sintattico</h3>
+					<h3>Syntactic parsing</h3>
 					<img src="./images/nlp-pipeline-syntax.png" style="border: none; box-shadow: none !important; width: 800px;">
-					<p class="fragment">Analisi delle dipendenze fra parole e della struttura della frase</p>
-					<p class="fragment">Il <em>parsing</em> viene effettuato da un <em>parser</em></p>
+					<p class="fragment">Analysis of dependency relations between words and of sentence structure</p>
+					<p class="fragment">The act of <em>parsing</em> is done by a <em>parser</em></p>
 
 					<aside class="notes">
-						Riconoscimento di una grammatica e conseguente costruzione di un albero sintattico
+						Detection of a grammar and consequent generation of a syntactic tree
 					</aside>
 				</section>
 
 
 				<section> <!--dependency parsing-->
-					<h3>Parsing sintattico</h3>
-					<p class="fragment">Parser sintattico si avvale di dati annotati o <span style="background-color: black; color: white">&nbsp;treebank&nbsp;</span> = corpus annotato a livello sintattico. Solitamente include:</p>
+					<h3>Syntactic parsing</h3>
+					<p class="fragment">Syntactic parses make use of syntactically annotated data or <span style="background-color: black; color: white">&nbsp;treebanks&nbsp;</span>. This level of annotation typically includes:</p>
 					<ul>
-						<li class="fragment">Lemmatizzazione (disambiguata)</li>
-						<li class="fragment">Tratti morfologici (disambiguati)</li>
-						<li class="fragment">Annotazione sintattica</li>
+						<li class="fragment">Lemmatisation (disambiguata)</li>
+						<li class="fragment">Morphological traits (disambiguati)</li>
+						<li class="fragment">Syntax annotation</li>
 							<ul style="font-size: 20pt;">
-								<li class="fragment">Parole piene sono connesse attraverso dipendenze</li>
-								<li class="fragment">Parole vuote dipendono dalla piena che modificano</li>
-								<li class="fragment">Segni di punteggiatura dipendono dalla testa della proposizione o del sintagma</li>
+								<li class="fragment">Content words are connected to one another through dependency relations</li>
+								<li class="fragment">Function words depend on the content word they modify</li>
+								<!--<li class="fragment">Punctuation depends on the head/root of the sentence</li>-->
 							</ul>
 					</ul>
 				</section>
 
 
 				<section>
-					<h3>Parsing sintattico</h3>
-					<p>Treebank di due tipi</p>
+					<h3>Syntactic parsing</h3>
+					<p>Two types of treebank</p>
 					<br />
-					<p class="fragment">A costituenti&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A dipendenze</li>
+					<p class="fragment">Costituency&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dependency</li>
 
 					<img src="./images/treebanks.jpg" style="border: none; box-shadow: none !important; width: 700px">
 				</section>
+
+
+				<section>
+					<h3>Linguistic annotation</h3>
+					<p>Universal Dependencies, standard</p>
+				</section>
+
+
 			</section>
 
 
-			<section> <!-- PARSING SEMANTICO -->
-
+			
+			<!-- SEMANTICS -->
+			<section> 
 				<section>
-					<h3>Parsing semantico</h3>
+					<h3>Semantic parsing</h3>
 					<img src="./images/nlp-pipeline-semantics.png" style="border: none; box-shadow: none !important; width: 800px;">
 
-					<p class="fragment">Processo di assegnazione di un significato, un senso, alla struttura sintattica corretta e, di conseguenza, all'espressione linguistica.</p> 
-					<!--<p>Il processo computazionale automatico che effettua tale assegnazione di significato alle parole di un testo è detto disambiguazione.</p>-->
+					<p class="fragment">Process of assigning meaning, a sense, to the correct syntactic structure. In doing so, the machine <em>disambiguates</em> word meaning.</p> 
 				</section>
 
+
 				<section>
-					<h3>Parsing semantico</h3>
-					<p class="fragment">Parsing semantico comincia con l'analisi delle relazioni fra parole. Questo richiede una conoscenza di:
+					<h3>Semantic parsing</h3>
+					<p class="fragment">Semantic parsing begins with an analysis of relations between words. This requires knowledge of:
 
 					<ul style="font-size: 20pt;"> 
-						<li class="fragment">gerarchie lessicali, e.g. iperonimia, iponimia, meronimia, olonimia, antonimia, sinonimia, etc. (WordNet). I sensi/concetti sono lessicalizzati per gruppi di sinonimi (synset).</li>
-						<li class="fragment">connotazione (semiotica) e collocazione, ovvero la combinazione di parole che occorrono spesso con una parola, e.g. idiomi, metafore o similitudini come "bianco come un cadavere."</li>
+						<li class="fragment">Lexical hierarchies, e.g. hypernymy, hyponymy, meronymy, holonymy, antonymy, etc. (WordNet). Groups of synonyms lexicalise senses/concepts (<em>synset</em>).</li>
+						<li class="fragment">Semiotic connotation and collocation, that is, words that occur frequently with other words, e.g. idioms, metaphors or similes such as "green with envy".</li>
 					</ul>
+				</section>
 
-					<p class="fragment">Esempi di parsing semantico:</p>
+
+				<section>
+					<h3>Semantic parsing</h3>
+					<p class="fragment">Examples of semantic parsing/tasks:</p>
 						<ul class="fragment" style="font-size: 20pt">
 							<li>Machine Translation</li>
-							<li>Semantic role labeling (a.k.a. shallow semantic parsing): processo di assegnazione di etichette semantiche a parole o frasi. Le etichette indicano il ruolo semantico delle parole e delle frasi in un contesto più ampio, e.g. agente, fine e risultato.</li>
+							<li>Semantic role labeling (a.k.a. <em>shallow semantic parsing</em>): process of assigning semantic labels to words or sentences. The labels denote the semantic role of words and sentences in a wider context, e.g. agent, goal or result.</li>
+							<li>Word Sense Disambiguation: assigning semantic labels to identifying and disambuate the sense of a word in a given sentence.</li>
+							<li>Sentiment Analysis: identifying and classifying sentiment and affective states in text. Used also to predict outcomes. Makes use of:</li>
+								<ul>
+									<li><strong>sentiment lexica</strong>: words are classified according to positive/negative/neutral polarity, strength of sentiment, particular types of attitude, etc.</li>
+									<li><strong>SentiWordNet</strong>: WordNet annotated for degrees of positivity/negativity/neutrality</li>
+								</ul>
 						</ul>
 
 
@@ -704,98 +696,47 @@
 			</section>
 
 
-				<section>
-					<h3>TAL per italiano delle origini</h3>
-					<p>Come siamo messi?</p>
-					<p class="fragment">...non benissimo... perché?</p>
-					<p class="fragment">Perché <span style="background-color: black; color: white">&nbsp;i dati (annotati) non sono accessibili&nbsp;</span> = non si possono addestrare altri modelli o strumenti di analisi (legalmente...)!</p>
-
-					<img class="fragment" src="./images/nerd.png" style="border: none; box-shadow: none !important; width: 200px;">
-				</section>
-
 			
 
+			<!-- RESOURCES -->
 			<section>
 				<section> 
-					<h2>Strumenti</h2>
-					<p>Italiano</p>
+					<h2>Resources</h2>
 				</section>
 
-				<section>
-					<h3>TreeTagger</h3>
-					<ul style="font-size: 20pt;">
-						<li><a href="https://sites.google.com/site/casualconc/utility-programs/casualtreetagger" target="_blank" title="Opens in new tab">Casual TreeTagger</a> (GUI for MAC)</li>
-						<li><a href="http://www.smo.uhi.ac.uk/~oduibhin/oideasra/interfaces/winttinterface.htm" target="_blank" title="Opens in new tab">Ciarán Ó Duibhín</a> (GUI for Windows)</li>
-						<li><a href="#" target="_blank" title="Opens in new tab"></a></li>
-						<li><a href="#" target="_blank" title="Opens in new tab"></a></li>
-					</ul>
-				</section>
-		
-					
 
 				<section>
-					<h3>NLP in locale</h3>
+					<h3>NLP</h3>
 					<ul style="font-size: 20pt;">
-						<li><a href="http://tint.fbk.eu/" target="_blank" title="Opens in new tab">Tint</a>: Pipeline NLP</li>
-						<li><a href="http://www.italianlp.it/" target="_blank" title="Opens in new tab">ItaliaNLP</a>: Pipeline NLP</li>
 						<li><a href="https://www.nltk.org/" target="_blank" title="Opens in new tab">NLTK</a>: Natural Language Toolkit</li>
 						<li><a href="https://spacy.io/" target="_blank" title="Opens in new tab">SpaCy</a>: Pipeline NLP</li>
 						<li><a href="https://opennlp.apache.org/" target="_blank" title="Opens in new tab">OpenNLP</a>: Pipeline NLP</li>
 						<li><a href="https://ufal.mff.cuni.cz/udpipe" target="_blank" title="Opens in new tab">UDPipe</a>: Pipeline NLP</li>
 						<li><a href="https://orange.biolab.si/" target="_blank" title="Opens in new tab">Orange Text Mining</a></li>
 						<li><a href="http://textpro.fbk.eu/" target="_blank" title="Opens in new tab">TextPro</a></li>
-						<!--<li><a href="http://opus.nlpl.eu/" target="_blank" title="Opens in new tab">Open Parallel Corpus</a></li>-->
-						<!--<li><a href="http://corpus-tools.org/home/" target="_blank" title="Opens in new tab">corpus-tools.org</a></li>-->
-					</ul>
-
-					<h3>NLP sul web</h3>
-					<ul style="font-size: 20pt;">
 						<li><a href="http://textanalysisonline.com/" target="_blank" title="Opens in new tab">Text Analysis Online</a></li>
 						<li><a href="https://voyant-tools.org/" target="_blank" title="Opens in new tab">Voyant tools</a>: Text analysis</li>
 					</ul>
 				</section>
 
+
 				<section>
-					<h3>Annotazione linguistica</h3>
+					<h3>Linguistic annotation</h3>
 					<ul style="font-size: 20pt;">
-						<li><a href="https://catma.de/" target="_blank" title="Opens in new tab">CATMA</a>: Textual Markup and Analysis</li>
+						<li><a href="https://corpus-analysis.com/tag/annotation#list" target="_blank" title="Opens in new tab">corpus-analysis.com</li>
 					</ul>
 				</section>
 
 
 				<section>
-					<h3>Tutorial e mailing List</h3>
-					
-					<h4>Tutorial</h4>
-						<ul>
-							<li><a href="http://www.hongkiat.com/blog/basic-linux-commands/" target="_blank" title="Opens in new tab">Basic Linux commands</a></li>
-							<li><a href="http://guide.bash.academy/" target="_blank" title="Opens in new tab">Bash tutorial</a></li>
-							<li><a href="http://regexr.com/" target="_blank" title="Opens in new tab">RegexR</a></li>
-						</ul>
-					<br /><br />
-					<h4>Mailing list</h4>
+					<h3>Mailing lists</h3>
 						<ul>
 							<li><a href="http://clu.uni.no/icame/corpora/" target="_blank" title="Opens in new tab">Corpora</a></li>
 						</ul>
 				</section>
-
-
-
-				<section>
-					<h3>Risorse testuali</h3>
-					<p>Italiano delle origini</p>
-					<ul>
-						<li><a href="http://tlio.ovi.cnr.it/TLIO/" target="_blank" title="Opens in new tab">TLIO</a></li>
-						<li><a href="http://www.bmanuel.org/projects/ct-HOME.html" target="_blank" title="Opens in new tab">Corpus Taurinense - An Old Italian Corpus</a></li>
-						<li><a href="http://www.corpusmidia.unito.it/" target="_blank" title="Opens in new tab">MIDIA (Morfologia dell'Italiano in DIAcronia)</a></li>
-					</ul>
-				</section>
 			</section>
-
 				
-
-				
-				</section>
+			</section>
 
 
 			</div>
