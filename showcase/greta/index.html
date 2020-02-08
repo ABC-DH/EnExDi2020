@@ -67,6 +67,50 @@
 						
 					</aside>
 				</section>
+
+
+				<!--*****************************************
+ 				* THE COURSE
+ 				******************************************-->
+
+				<section>
+					<h2>The course</h2>
+
+					<ul>
+						<li><strong>Theory</strong></li>
+							<ul style="font-size: 22pt;">
+								<li>Overview of Natural Language Processing</li>
+									<ul style="font-size: 16pt">
+										<li>Automatic processing of written or spoken information in natural language (modern or historical)</li>
+										<!--<li>Development of methods and tools to process:</li>
+											<ul>
+												<li class="fragment">word structure and distribution: <span style="background-color: black; color: white;">&nbsp;lexicon&nbsp;</span> and <span style="background-color: black; color: white;">&nbsp;morphology&nbsp;</span></li>
+												<li class="fragment">words grouped in complex structures: <span style="background-color: black; color: white;">&nbsp;syntax&nbsp;</span></li>
+												<li class="fragment">simple and complex meaning: <span style="background-color: black; color: white;">&nbsp;semantics&nbsp;</span></li>
+												<li class="fragment">appropriate use of words/expressions in context: <span style="background-color: black; color: white;">&nbsp;pragmatics&nbsp;</span></li>
+												<li class="fragment">sound: <span style="background-color: black; color: white;">&nbsp;phonetics, phonology, prosody&nbsp;</span></li>
+											</ul>-->
+									</ul>
+							</ul>
+						<li><strong>Practice</strong></li>
+							<ul style="font-size: 22pt;">
+								<li>Text preparation with the command line: count, sort, extract, format, clean data</li>
+								<li>Lemmatisation and PoS-tagging (with TreeTagger): basics of any NLP project</li>
+							</ul>
+						<li><strong>Not covered</strong></li>
+							<ul style="font-size: 22pt;">
+								<li>Programming</li>
+							</ul>
+					</ul>
+					<aside class="notes">
+							
+						</aside>
+					
+				</section>
+					
+
+			
+
 				
 				<!--*****************************************
  				* WHO AM I
@@ -144,47 +188,6 @@
 					</ul>
 				</section>
 
-
-				<!--*****************************************
- 				* THE COURSE
- 				******************************************-->
-
-				<section>
-					<h2>The course</h2>
-
-					<ul>
-						<li><strong>Theory</strong></li>
-							<ul style="font-size: 22pt;">
-								<li>Overview of Natural Language Processing</li>
-									<ul style="font-size: 16pt">
-										<li>Automatic processing of written or spoken information in natural language (modern or historical)</li>
-										<li>Development of methods and tools to process:</li>
-											<ul>
-												<li class="fragment">word structure and distribution: <span style="background-color: black; color: white;">&nbsp;lexicon&nbsp;</span> and <span style="background-color: black; color: white;">&nbsp;morphology&nbsp;</span></li>
-												<li class="fragment">words grouped in complex structures: <span style="background-color: black; color: white;">&nbsp;syntax&nbsp;</span></li>
-												<li class="fragment">simple and complex meaning: <span style="background-color: black; color: white;">&nbsp;semantics&nbsp;</span></li>
-												<li class="fragment">appropriate use of words/expressions in context: <span style="background-color: black; color: white;">&nbsp;pragmatics&nbsp;</span></li>
-												<li class="fragment">sound: <span style="background-color: black; color: white;">&nbsp;phonetics, phonology, prosody&nbsp;</span></li>
-											</ul>
-									</ul>
-							</ul>
-						<li><strong>Practice</strong></li>
-							<ul style="font-size: 22pt;">
-								<li>Text preparation with the command line: count, sort, extract, format, clean data</li>
-								<li>Lemmatisation and PoS-tagging (with TreeTagger): basics of any NLP project</li>
-							</ul>
-						<li><strong>Not covered</strong></li>
-							<ul style="font-size: 22pt;">
-								<li>Programming</li>
-							</ul>
-					</ul>
-					<aside class="notes">
-							Il Trattamento Automatico del Linguaggio è il processo di trattamento automatico mediante un calcolatore elettronico della informazioni scritte o parlate in una lingua naturale (sia essa moderna o antica/morta).
-							TAL viene spesso confuso con la Linguistica Computazionale. Sebbene i due campi spesso si sovrappongano, il TAL è più ingeneristico, nel senso che si occupa di sviluppare tecnologie in grado di analizzare o generare/riprodurre una linguaggio, mentre la LC è più teorico-scientifico, volta a studiare e scoprire fenomeni linguistici.
-						</aside>
-					
-				</section>
-
 				<!--*****************************************
  				* EXAMPLE APPLICATIONS OF NLP and CL
  				******************************************-->
@@ -222,32 +225,27 @@
 						<p style="font-size: 20pt; margin-top: -25px;">The use of Latin in movies and TV series between 1913-2018</p>	
 
 						<ul style="font-size: 16pt; text-align: left;">
-							<li>4,957,376 subtitle files</li>
-							<br />
-							<li>Study of quoted vs. <strong>original</strong> Latin</li>
-
+							
+							<li class="fragment">Develop a Latin language detector to filter 4,957,376 subtitle files</li>
+							<li class="fragment">Goal:</li>
 								<ul>
-									<li>Higitus figitus migitus mum, prestidigitonium! <img src="./images/merlin.png" style="border: none; box-shadow: none !important; width: 30px"/></li>
-									<li>Skypus interruptus</li>
-									<li>numquam fumes cannabis</li>
-									<li>magna cum loudly</li>
-									<li>tempura sit</li>
-									<li>Latin non difficultorum</li>
-									<li>non habemus carjack desolatus</li>
-									<li>e pluribus aluminum</li>
-									<li>quid pro fucking quo</li>
-									<li>...and many others!</li>
+									<li class="fragment">Study of quoted vs. <strong>original</strong> Latin: <span class="fragment">Higitus figitus migitus mum, prestidigitonium!</span> <!--<img  class="fragment" src="./images/merlin.png" style="border: none; box-shadow: none !important; width: 30px"/>--><span class="fragment">, Skypus interruptus</span><span class="fragment">, numquam fumes cannabis</span><span class="fragment">, magna cum loudly</span><span class="fragment">, tempura sit</span><span class="fragment">, non habemus carjack desolatus</span><span class="fragment">, e pluribus aluminum</span><span class="fragment">, quid pro fucking quo</span><span class="fragment">, ... </span></li>
+									<br />
+									<li class="fragment">Refine the language detector: <span class="fragment">Zucchinis in bikinis</span><span class="fragment">, potus</span><span class="fragment">, benefit album</span><span class="fragment">, lasagna wit pesto in portofino</span><span class="fragment">, o cannabis o cannabis</span><span class="fragment">, pizza possum</span><span class="fragment">, trabant</span><span class="fragment">, <span class="fragment">quasimodo qua qua quasimodo</span><span class="fragment">, ...</span></li>
+										
+
 								</ul>
-							<li>By-product of this research: Latin language detector</li>
+
+							
 						</ul>
 
-						<!--<img src="./images/latin-film-dates_uniq.png" style="border: none; box-shadow: none !important; width: 400px" />-->
-
 						
-					</section>
-					
 
-			
+						<!--<img src="./images/latin-film-dates_uniq.png" style="border: none; box-shadow: none !important; width: 400px" />-->
+					</section>
+
+
+			    
 
 			</div>
 		</div>
