@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="reveal.js_DO-NOT-TOUCH/css/reset.css">
 		<link rel="stylesheet" href="reveal.js_DO-NOT-TOUCH/css/reveal.css">
-		<link rel="stylesheet" href="reveal.js_DO-NOT-TOUCH/css/theme/black.css">
+		<link rel="stylesheet" href="reveal.js_DO-NOT-TOUCH/css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="reveal.js_DO-NOT-TOUCH/lib/css/monokai.css">
@@ -24,10 +24,24 @@
 
 		<style type="text/css">
 			.highlight {
-				color: yellow; /* green = #00FF00 */
+				color: red; /* green = #00FF00 */
 			}
-			.piccolissimo {
+			.smallest {
 				font-size: 0.3em;
+			}
+			.smaller {
+				font-size: 0.6em;
+			}
+			.small {
+				font-size: 0.8em;
+			}
+			.big {
+				font-size: 1.3em;
+				font-weight: bold;
+			}
+			.underline {
+				text-decoration: underline; 
+				text-decoration-color: yellow;
 			}
 		</style>
 	</head>
@@ -36,28 +50,119 @@
 			<div class="slides">
 
 				<!-- <a title="U.S. Census [Public domain]" href="https://commons.wikimedia.org/wiki/File:Early_US_Census_Machines_1960_08012.jpg"><img width="512" alt="Early US Census Machines 1960 08012" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Early_US_Census_Machines_1960_08012.jpg/512px-Early_US_Census_Machines_1960_08012.jpg"></a> -->
-				<section data-background-image="img/Early_US_Census_Machines_1960_08012.jpg" image-backgrond-size="cover">
-					<h2 style="background-color: black">Explore your computer (1)</h2>
-					<p style="background-color: black; font-style: italic;" class="highlight">EnExDi2020</p>
-					<br/><br/><br/><br/><br/><br/>
+				<section>
+					<p class="big">Know your computer (1)</p>
+					<img src="img/Early_US_Census_Machines_1960_08012.jpg" width="50%">
+					<p class="small underline">Elena Spadini (Université de Lausanne / ABC-DH), <em>EnExDi2020</em></p>
 				</section>
 				
 				<section>
 					<ol>
-						<li class="highlight">Bash: what and why</li>
 						<li>Paths in file systems</li>
-						<li class="highlight">Bash: practice</li>
+						<li>File naming conventions</li>
+						<li>Bash: what and why</li>
+						<li>Bash: practice</li>
+						<li>Github in a nutshell</li>
 						<li>On the importance of <em>readme</em></li>
-						<li class="highlight">Github in a nutshell</li>
 					</ol>
 				</section>
 
 
-				<!-- 1) BASH. WHAT AND WHY -->
+
+				
+		<!-- 2. -------------------------------  1) Paths in file systems  ------------------------------------>
+				
+
+				<section>
+					1. Paths in file systems
+				</section>
+
+				<section>
+					<img src="img/fileSystemEle.jpg" width="90%">
+				</section>
+
+				<section>
+					<div>
+						<img src="img/fileSystemEle.jpg" width="50%">
+						<p class="small">Absolute path (from root / )</p>
+						<pre><code class="nohighlight">/home/espadini/Documents/EnExDi/materials</code></pre>
+					</div>
+					<div class="fragment">
+						<p class="small">Relative path (from <code class="nohighlight smaller" style="background-color: lightgrey">/home/espadini/Documents</code>)</p>
+						<pre><code class="nohighlight">EnExDi/materials</code></pre>
+						<pre><code class="nohighlight">./EnExDi/materials</code></pre>
+					</div>
+				</section>
+
+				<section>
+					<div>
+						<img src="img/fileSystemEle.jpg" width="60%">
+						<p class="small">From EnExDi to Desktop</p>
+						<pre><code class="nohighlight">../../Desktop</code></pre>
+					</div>
+					<div class="fragment">
+						<p class="small">From Desktop to EnExDi</p>
+						<pre><code class="nohighlight">../Documents/EnExDi</code></pre>
+					</div>
+				</section>
+
+				<section>
+					<img src="img/fileSystemEle.jpg" width="60%">
+					<p class="small">From Home to EnExDi2019</p>
+					<pre class="fragment"><code class="nohighlight">espadini/Documents/EnExDi2019</code></pre>
+					<p class="small fragment">From Dropbox to Bin</p>
+					<pre class="fragment"><code class="nohighlight">../../../bin</code></pre>
+				</section>
+
+				
+				<section>
+					<p>File naming conventions</p>
+					<ul class="smaller">
+						<li>No space characters or punctuation other than hyphens (-), underscores (_), and periods (.) should be used in filenames</li>
+						<li>Choose a capitalization strategy and observe it consistently throughout your project</li>
+						<li>Filenames that contain multiple logical words can avoid the use of spaces and still maintain legibility by using underscores, hyphens, or camel case, e.g., “index_places.txt”, “index-places.txt”, or “indexPlaces.txt”. Choose a convention and use it consistently</li>
+						<li>If you keep multiple versions or drafts of files in the same directory, include a date stamp in the filename. We recommend a year-month-date format, with a four-digit year and two-digit months and dates, e.g., “2016-07-30_index-places.txt”.</li>
+						<li>Filenames should have a meaningful filename extension, like .xml, .txt, .docx</li>
+					</ul>
+					<p class="smallest">Source: <a href="https://github.com/DiXiT-eu/collatex-tutorial/blob/master/unit1/Command_line.ipynb">https://github.com/DiXiT-eu/collatex-tutorial/blob/master/unit1/Command_line.ipynb</a></p>
+					<p class="small">Take a minute to make extensions visible after this course!</p>
+				</section>
+
+				<section>
+					<p>Choose the folder in your computer where you want to put all EnExDi2020 materials ...</p><br/>
+					<ul style="list-style: none">
+						<li>Documents?</li>
+						<li>Desktop? (is it included in back-up?)</li>
+						<li>Home?</li>
+					</ul>
+				</section>
+
+				<section>
+					<p>Draw the path from Home (Mac or Linux) or C: (Windows) to that location.</p>
+					<img src="img/fileSystemEle.jpg" width="60%"/>
+					<ul class="smaller">
+						<li>On Windows, in the Explorer: click on 'Local Drive (C:)', then click on 'Users', then click on your login name.</li>
+						<li>On Mac, in the Finder: select Go -> Home in the menu.</li>						
+					</ul>
+				</section>
+
+
+
+	<!-- ------------------------------- 2) BASH. WHAT AND WHY ----------------------------->
+
+
+				<section>
+					3. Bash
+				</section>
+
 				<section>
 					<h3>Bash</h3>
 					<p>is a <span class="highlight">command language</span> and script language.</p>
-					<p class="piccolissimo"><a href="https://commons.wikimedia.org/wiki/File:HypertextEditingSystemConsoleBrownUniv1969.jpg#/media/File:HypertextEditingSystemConsoleBrownUniv1969.jpg"><img width="60%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/HypertextEditingSystemConsoleBrownUniv1969.jpg/1200px-HypertextEditingSystemConsoleBrownUniv1969.jpg" alt="HypertextEditingSystemConsoleBrownUniv1969.jpg"></a><br>By Gregory Lloyd - personal photograph, <a href="https://creativecommons.org/licenses/by/2.0" title="Creative Commons Attribution 2.0">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=89019">Link</a></p>
+					<p class="smallest"><a href="https://commons.wikimedia.org/wiki/File:HypertextEditingSystemConsoleBrownUniv1969.jpg#/media/File:HypertextEditingSystemConsoleBrownUniv1969.jpg"><img width="60%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/HypertextEditingSystemConsoleBrownUniv1969.jpg/1200px-HypertextEditingSystemConsoleBrownUniv1969.jpg" alt="HypertextEditingSystemConsoleBrownUniv1969.jpg"></a><br>By Gregory Lloyd - personal photograph, <a href="https://creativecommons.org/licenses/by/2.0" title="Creative Commons Attribution 2.0">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=89019">Link</a></p>
+				</section>
+
+				<section>
+					EnExDi2020/materials/1_KnowYourComputer_Bash/renameExample
 				</section>
 
 				<!-- show with mv -v hello.txt hello1.txt
@@ -70,7 +175,7 @@
 					<br/>
 					<a style="margin-right: 100px" title="HEXcube [CC0]" href="https://commons.wikimedia.org/wiki/File:App_Lens_on_Ubuntu_16.04LTS.png"><img width="50%" alt="App Lens on Ubuntu 16.04LTS" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/App_Lens_on_Ubuntu_16.04LTS.png/512px-App_Lens_on_Ubuntu_16.04LTS.png"></a>
 
-					<a href="https://de.wikipedia.org/wiki/Datei:Word_win_1906.png#/media/Datei:Word_win_1906.png"><img width="32%" src="https://upload.wikimedia.org/wikipedia/de/c/cf/Word_win_1906.png" alt="Word win 1906.png"></a><div class="piccolissimo" style="text-align: right"><br>Versionsgeschichte siehe <a class="external text" href="https://de.wikipedia.org/w/index.php?title=Microsoft_Word&amp;action=history">hier</a> - selbst erstellter Screenshot, <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Namensnennung-Weitergabe unter gleichen Bedingungen">CC BY-SA 3.0</a>, <a href="https://de.wikipedia.org/w/index.php?curid=10897945">Link</a></div>
+					<a href="https://de.wikipedia.org/wiki/Datei:Word_win_1906.png#/media/Datei:Word_win_1906.png"><img width="32%" src="https://upload.wikimedia.org/wikipedia/de/c/cf/Word_win_1906.png" alt="Word win 1906.png"></a><div class="smallest" style="text-align: right"><br>Versionsgeschichte siehe <a class="external text" href="https://de.wikipedia.org/w/index.php?title=Microsoft_Word&amp;action=history">hier</a> - selbst erstellter Screenshot, <a href="https://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Namensnennung-Weitergabe unter gleichen Bedingungen">CC BY-SA 3.0</a>, <a href="https://de.wikipedia.org/w/index.php?curid=10897945">Link</a></div>
 				</section>
 
 				
@@ -78,42 +183,99 @@
 					<h3>BASH</h3>
 					<p>is a command line <span class="highlight">interpreter</span> (Unix shell), which translates the command language into instructions for the computer. It runs in a <span class="highlight">terminal</span>.</p>
 					
-					<!--<span class="piccolissimo" style="margin-right: 300px"><a title="Unbekannt [Public domain]" href="https://commons.wikimedia.org/wiki/File:Cygwin_logo.svg"><img width="10%" alt="Cygwin logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Cygwin_logo.svg/512px-Cygwin_logo.svg.png"></a></span>-->
+					<!--<span class="smallest" style="margin-right: 300px"><a title="Unbekannt [Public domain]" href="https://commons.wikimedia.org/wiki/File:Cygwin_logo.svg"><img width="10%" alt="Cygwin logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Cygwin_logo.svg/512px-Cygwin_logo.svg.png"></a></span>-->
 
-					<span class="piccolissimo"><a href="https://commons.wikimedia.org/wiki/File:DEC_VT100_terminal_transparent.png#/media/File:DEC_VT100_terminal_transparent.png"><img width="36%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/DEC_VT100_terminal_transparent.png/1200px-DEC_VT100_terminal_transparent.png" alt="DEC VT100 terminal transparent.png"></a><br>By <a href="//commons.wikimedia.org/w/index.php?title=User:Gorthmog&amp;action=edit&amp;redlink=1" class="new" title="User:Gorthmog (page does not exist)">Gorthmog</a> - <span class="int-own-work" lang="en">Own work. </span><a href="//commons.wikimedia.org/wiki/File:Extracted_image_icon.png" class="image"></a>This file has been extracted from another file: <a href="//commons.wikimedia.org/wiki/File:DEC_VT100_terminal.jpg" title="File:DEC VT100 terminal.jpg">DEC VT100 terminal.jpg</a><span class="wpImageAnnotatorControl wpImageAnnotatorOff"><a href="//commons.wikimedia.org/wiki/File:DEC_VT100_terminal.jpg" class="image" title="original file"></a></span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=78497051">Link</a></span>
-					
+					<span class="smallest"><a href="https://commons.wikimedia.org/wiki/File:DEC_VT100_terminal_transparent.png#/media/File:DEC_VT100_terminal_transparent.png"><img width="36%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/DEC_VT100_terminal_transparent.png/1200px-DEC_VT100_terminal_transparent.png" alt="DEC VT100 terminal transparent.png"></a><br>By <a href="//commons.wikimedia.org/w/index.php?title=User:Gorthmog&amp;action=edit&amp;redlink=1" class="new" title="User:Gorthmog (page does not exist)">Gorthmog</a> - <span class="int-own-work" lang="en">Own work. </span><a href="//commons.wikimedia.org/wiki/File:Extracted_image_icon.png" class="image"></a>This file has been extracted from another file: <a href="//commons.wikimedia.org/wiki/File:DEC_VT100_terminal.jpg" title="File:DEC VT100 terminal.jpg">DEC VT100 terminal.jpg</a><span class="wpImageAnnotatorControl wpImageAnnotatorOff"><a href="//commons.wikimedia.org/wiki/File:DEC_VT100_terminal.jpg" class="image" title="original file"></a></span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=78497051">Link</a></span>
 				</section>
 				<!-- show About of Gnome terminal -->
 
 				<section>
+					<h3>Open Terminal</h3>
+					<ul>
+						<li>For Linux Ubuntu: you can type Ctrl-Alt-T or you can type Terminal into the Search box.</li>
+						<li>For Windows: open Cygwin</li>
+						<li>For Mac OS X: the Terminal.app that you will find in the Applications → Utilities folder.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Navigate your file system</h3>
+					<br/>
+					<pre><code class="nohighlight">espadini$ pwd</code></pre>
+					<p class="small">Shows where you are</p>
+				</section>
+
+				<section>
+					<h3>Navigate your file system</h3>
+					<br/>
+					<pre><code class="nohighlight">$ ls</code></pre>
+					<p class="small">Lists the names of the files and directories in the current directory</p>
+					<br/>
+					<div class="fragment">
+						<pre><code class="nohighlight">$ ls -l</code></pre>
+						<p class="small">Use a long listing format</p>
+					</div>
+					<br/>
+					<div class="fragment">
+						<pre><code class="nohighlight">$ ls --help</code></pre>
+						<p class="small">Explains how to use a command and what options it accepts</p>
+					</div>
+				</section>
+
+				<section>
+					<h3>Navigate your file system</h3>
+					<br/>
+					<pre><code class="nohighlight">$ cd Documents</code></pre>
+					<pre><code class="nohighlight">$ cd ../../bin</code></pre>
+					<p class="small">Change directory</p>
+				</section>
+
+				<section>
+					<h3>Navigate your file system</h3>
+					<br/>
+					<p>Arrow up and down to move in the terminal history</p>
+				</section>
+
+				<section>
+					<h3>Navigate your file system</h3>
+					<br/>
+					<p>Tab for auto-completion</p>
+				</section>
+
+				<section>
+					<h3>Exercise (5 mins)</h3>
+					<br/><br/>
+					Move to the location where you want to download EnExDi2020 materials and write down the path to it (we will use it a lot during the week!)
+				</section>
+
+				<section>
+					<h3>Github</h3>
+					<br/>
+					In the location where you want to<br/>download EnExDi2020 materials:<br/><br/>
+					<pre><code class="nohighlight">$ git clone https://github.com/ABC-DH/EnExDi2020.git</code></pre>
+					<p class="small">Get a copy of the git repository<br/><a href="https://github.com/ABC-DH/EnExDi2020">https://github.com/ABC-DH/EnExDi2020</a></p>
+				</section>
+
+				<section>
+					At the beginning of <span class="highlight">every</span> course:
+					<br/><br/>
+					<ol>
+						<li>Open your terminal</li>
+						<li>Navigate to EnExDi2020</li>
+						<li>Type <pre><code class="nohighlight">git pull</code></pre> to update the folder</li>
+					</ol>
+				</section>
+
+				
+
+
+					
+				<section>
 					
 				</section>
 
+				
 
-<!--
-
-				<section> 
-					<h3>E.1: Navigazione file di sistema</h3>
-					<p>Present working directory: <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;pwd&nbsp;</span></p>
-					<pre><code class="nohighlight">greta$ pwd</code></pre>
-					<p>Mostra la mia posizione attuale</p>
-					<pre><code class="nohighlight">greta$ pwd
-					/Users/greta</code></pre>
-				</section>
-
-
-				<section> 
-					<h3>E.1: Navigazione file di sistema</h3><span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;ls -l&nbsp;</span></p>
-					<pre><code class="nohighlight">greta$ ls -l</code></pre>
-					<p>Mostra la lista dei contenuti della directory attuale</p>
-					<pre><code class="nohighlight">$ total 352
-					drwx------@  6 greta  staff     204 22 Dic  2018 Applications
-					drwx------+ 17 greta  staff     578 23 Giu 15:03 Desktop
-					drwx------+  5 greta  staff     170 13 Gen 15:27 Documents
-					drwx------+ 19 greta  staff     646 23 Giu 13:55 Downloads
-					...</code></pre>
-				</section>
-			-->
 			</div>
 		</div>
 
