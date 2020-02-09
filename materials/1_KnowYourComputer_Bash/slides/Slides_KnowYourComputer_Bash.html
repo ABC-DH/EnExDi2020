@@ -24,7 +24,9 @@
 
 		<style type="text/css">
 			.highlight {
-				color: red; /* green = #00FF00 */
+				/* color: red;  green = #00FF00 */
+				text-decoration: underline; 
+				text-decoration-color: red;
 			}
 			.smallest {
 				font-size: 0.3em;
@@ -51,18 +53,26 @@
 
 				<!-- <a title="U.S. Census [Public domain]" href="https://commons.wikimedia.org/wiki/File:Early_US_Census_Machines_1960_08012.jpg"><img width="512" alt="Early US Census Machines 1960 08012" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Early_US_Census_Machines_1960_08012.jpg/512px-Early_US_Census_Machines_1960_08012.jpg"></a> -->
 				<section>
-					<p class="big">Know your computer (1)</p>
+					<p class="big">Get to know your computer .1</p>
 					<img src="img/Early_US_Census_Machines_1960_08012.jpg" width="50%">
 					<p class="small underline">Elena Spadini (Université de Lausanne / ABC-DH), <em>EnExDi2020</em></p>
 				</section>
 				
 				<section>
 					<ol>
-						<li>Paths in file systems</li>
-						<li>File naming conventions</li>
-						<li>Bash: what and why</li>
-						<li>Bash: practice</li>
-						<li>Github in a nutshell</li>
+						<li>Paths
+							<ul>
+								<li>File systems</li>
+								<li>File naming conventions</li>
+							</ul>
+						</li>
+						<li>Bash (and git)
+							<ul>
+								<li>What and why</li>
+								<li>Practice</li>
+								<li>Clone the repo</li>
+							</ul>
+						</li>
 						<li>On the importance of <em>readme</em></li>
 					</ol>
 				</section>
@@ -139,8 +149,9 @@
 
 				<section>
 					<p>Draw the path from Home (Mac or Linux) or C: (Windows) to that location.</p>
-					<img src="img/fileSystemEle.jpg" width="60%"/>
+					<img src="img/fileSystemEle.jpg" width="40%"/>
 					<ul class="smaller">
+						<li>On Linux Ubuntu: go to 'Other Locations' and select 'Computer', than 'Home', than your login name, etc.</li>
 						<li>On Windows, in the Explorer: click on 'Local Drive (C:)', then click on 'Users', then click on your login name.</li>
 						<li>On Mac, in the Finder: select Go -> Home in the menu.</li>						
 					</ul>
@@ -152,7 +163,7 @@
 
 
 				<section>
-					3. Bash
+					2. Bash (and git)
 				</section>
 
 				<section>
@@ -201,7 +212,7 @@
 				<section>
 					<h3>Navigate your file system</h3>
 					<br/>
-					<pre><code class="nohighlight">espadini$ pwd</code></pre>
+					<pre><code class="nohighlight">$ pwd</code></pre>
 					<p class="small">Shows where you are</p>
 				</section>
 
@@ -243,35 +254,57 @@
 				</section>
 
 				<section>
-					<h3>Exercise (5 mins)</h3>
-					<br/><br/>
-					Move to the location where you want to download EnExDi2020 materials and write down the path to it (we will use it a lot during the week!)
+					<h3>Exercise</h3>
+					<ol class="smaller">
+						<li>Navigate to the location where you want to download EnExDi2020 materials and back to home using Bash. To move around use <code>cd</code>, to know where you are use <code>pwd</code>, and to lists the files and folders use <code>ls</code>. Don't forget that auto-completion (the 'tab' key) can help you.</li>
+						<li>Write down in your notes (not in the terminal) the absolute path to that location, because we will use it a lot during the week. Remember that absolute paths starts with "/", from <code>/home</code> for Mac and Linux (for Windows, keep reading). The drawing you prepared before should help here.<br/>For example: <code>/home/espadini/Documents</code>.<br/>Attention, for Windows the absolute path should start with <code>/cygdrive/c/Users/</code> and then your login name. For example: <code>/cygdrive/c/Users/elena/Documents</code>.</li>
+						<li>Test this absolute path. Wherever you are in the terminal, type <code>cd</code> and the absolute path.<br/>For example: <code>cd /home/espadini/Documents</code>.</li>
+					</ol>
 				</section>
 
 				<section>
 					<h3>Github</h3>
 					<br/>
-					In the location where you want to<br/>download EnExDi2020 materials:<br/><br/>
+					In the terminal, once you are in the location where you want to download EnExDi2020 materials, type:<br/><br/>
 					<pre><code class="nohighlight">$ git clone https://github.com/ABC-DH/EnExDi2020.git</code></pre>
 					<p class="small">Get a copy of the git repository<br/><a href="https://github.com/ABC-DH/EnExDi2020">https://github.com/ABC-DH/EnExDi2020</a></p>
 				</section>
 
 				<section>
-					At the beginning of <span class="highlight">every</span> course:
+					<h3>Github</h3>
+					<p><a href="http://github.com" target="blank">Github</a> is a development platform, used to share and work collaboratively on code. It uses the <span class="highlight">version control system git</span>.</p>
+					<img width="70%" src="img/git.gif">
+					<p class="smallest">https://tekraze.com/2018/01/introduction-git-version-control/</p>
+				</section>
+
+				<section>
+					At the beginning of <span class="highlight">every course</span>:
 					<br/><br/>
 					<ol>
 						<li>Open your terminal</li>
-						<li>Navigate to EnExDi2020</li>
+						<li>Navigate to EnExDi2020, using <code>cd</code> and the absolute path noted</li>
 						<li>Type <pre><code class="nohighlight">git pull</code></pre> to update the folder</li>
 					</ol>
 				</section>
 
-				
 
 
-					
 				<section>
-					
+					3. On the importance of <em>readme</em>
+				</section>
+
+				<section class="small">
+					<p><span class="highlight">'Readme' files</span> generally describe the content of the directory or give information about how to use the files next to it.</p>
+					<p>'Readme' files are .txt (plain text) or .md (markdown) files. <span class="highlight">Plain text</span> is text without any additional formatting or encoding. <span class="highlight">Markdown</span> is a lightweight markup language, a way to style elements in your texts, such as titles, links, lists, codes and other elements (see a <a href="https://www.markdownguide.org/cheat-sheet" target="blank">markdown cheat sheet</a>); some programs are able to render markdown.</p>
+					<p>Use <span class="highlight">Sublime</span> to open .txt and .md files (even if Markdown is rendered only partially; a plugin is available if needed).</p>
+				</section>
+
+				<section>
+					Questions?
+				</section>
+
+				<section>
+					<p class="small">Spadini, Elena. "Get to know your computer .1". <em>Encoder, Exploiter, Diffuser. Les humanités numériques dans les projets de recherche</em>. Poitiers, 2020. (CC-BY)</p>
 				</section>
 
 				
