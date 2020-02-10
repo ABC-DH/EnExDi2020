@@ -51,9 +51,9 @@
 				<section>
 					<h1>Practice</h1>
 					
-					<p style="font-size: 20pt"><span style="background-color: #c45875; color: white">&nbsp;Encoder, Exploiter, Diffuser: Les humanités numériques dans les projets de recherche&nbsp;</span><br />
+					<p style="font-size: 20pt"><span style="background-color: #3962A5; color: white">&nbsp;Encoder, Exploiter, Diffuser: Les humanités numériques dans les projets de recherche&nbsp;</span><br />
 						<span style="color: #000000; font-size: 18pt">University of Poitiers</span><br />12 February 2020</p>
-						<p style="font-size: 18pt;">Twitter: #enexdi2020</p>
+						<p style="font-size: 18pt;">Twitter: <a href="https://twitter.com/hashtag/enexdi2020?src=hash" target="_blank" title="Opens in new tab">#enexdi2020</a></p>
 
 					<br />
 					<p style="font-size: 18pt; margin-bottom: -15px;"><strong>Greta H. Franzini</strong></p>
@@ -81,7 +81,7 @@
 
 					<section>
 						<h2>Command line</h2>
-						<p>Also known as "terminal" in Unix systems.</p>
+						<p>Also known as <strong>TERMINAL</strong> in Unix systems.</p>
 						<p class="fragment">A user interface to type commands directly to the machine</p>
 						
 						<img class="fragment" src="./images/terminal.png" style="border: none; box-shadow: none !important; width: 600px">
@@ -93,9 +93,9 @@
 						<p>Why use it in NLP?</p>
 
 						<ul>
-							<li class="fragment">Text/data preparation with RegEx (Regular Expressions)</li>
+							<li class="fragment">Text/data preparation (with Regular Expressions)</li>
 								<ul style="font-size: 20pt;" class="fragment">
-									<li>Regular Expressions: sequence of characters identifying a search pattern</li> <!-- do a section on Regex-->
+									<li>Regular Expressions (RegEx): sequence of characters identifying a search pattern</li> <!-- do a section on Regex-->
 								</ul>
 							<li class="fragment">Launching NLP tools (e.g. TreeTagger)</li>
 							<li class="fragment">Interaction with both small machines and servers</li>
@@ -106,34 +106,32 @@
 					<section>
 						<h2>Text preparation</h2>
 						<br />
-						<p><strong>Test corpus</strong><br />17th century French drama (36 works, 8 authors)<br />
+						<p><strong>Test corpus</strong></p>
+						<p style="font-size: 20pt;">Normalised 17th century French drama (36 works, 8 authors)</p>
 					</section>
 
 
 					<section>
 						<h2>Text preparation</h2>
-						<p>Let's say we want to prepare the text for lemmatisation and PoS-tagging and run some preliminary calculations, i.e.:</p>
-						<ul>
-							<li>Number of unique words</li>
-							<li>Total number of words</li>
+						<p style="font-size: 20pt; text-align: left;">Let's say we want to:</p> 
+						<ol style="font-size: 20pt;">
+							<li class="fragment">prepare the text for lemmatisation and PoS-tagging</li>
+							<li class="fragment">run some preliminary calculations: total number of words (<em>tokens</em>), total number of unique words (<em>types</em>)</li>
+						</ol>
+						<p class="fragment" style="font-size: 20pt; text-align: left;">For our calculations and the use of many NLP tools, the corpus needs to meet these requirements:</p>
+						<ul style="font-size: 20pt; text-align: left">
+							<li class="fragment">TXT format</li>
+							<li class="fragment">No XML markup</li>
 						</ul>
 					</section>
 
 
-					<section>
-						<h2>Text preparation</h2>
-						<p>For our calculations and the use of many NLP tools,<br />the corpus needs to meet these requirements:</p>
-						<ul>
-							<li>TXT format</li>
-							<li>No XML markup</li>
-						</ul>
-					</section>
 
 
 					<section>
 						<h2>Text preparation</h2>
 						<p>Download the corpus</p>
-						<ol>
+						<ol style="font-size: 20pt;">
 							<li>Download the corpus to a folder on the Desktop</li>
 							<li>Study the files: what to keep and/or remove? E.g.:</li>
 								<ul>
@@ -180,7 +178,7 @@
 					<section>
 						<h2>Text preparation</h2>
 						<br />
-						<p>No whitespaces in file names!</p>
+						<p><strong>No whitespaces</strong> in file names!</p>
 					</section>
 
 
@@ -214,6 +212,15 @@
 						<h2>Text preparation</h2>
 						<br />
 						<p>More manual and/or automatic cleaning depending on our needs</p>
+					</section>
+
+
+					<section>
+						<h2>Text preparation</h2>
+						<br />
+						<p>Open <span style="font-family: monospace;">corpus.txt</span></p>
+						<br />
+						<pre><code class="nohighlight">cat corpus.txt</code></pre>
 					</section>
 
 
@@ -334,7 +341,7 @@
 						<h2>TreeTagger</h2>
 						<p>Add text/corpus to the main <span style="font-family: monospace">treetagger</span> folder as a clean raw text file</p>
 						<br />
-						<p>In our case, the text file is c<span style="font-family: monospace">orpus-tokens.txt</span></p>
+						<p>In our case, the text file is <span style="font-family: monospace">corpus-tokens.txt</span></p>
 					</section>
 
 
@@ -532,21 +539,23 @@
 
 					<section>
 						<h2>Lexical richness</h2>
-						<p>"Gradi" di TTR</p>
+						<p>"Degrees" of TTR</p>
 
-						<p>Cos'è una percentuale bassa/media/alta?</p>
+						<p>What is a low/medium/high richness?</p>
 					</section>
 
 					
 
 					<section>
 						<h2>Lexical richness</h2>
-						<p>Quiz: che TTR avranno...</p>
+						<p>Quiz</p>
 
 						<ul>
-							<li>...due traduzioni portoghesi letterali di <em>Orgoglio e Pregiudizio</em>?</li>
-							<li>...un testo plagiato rispetto a quello copiato?</li>
+							<li>Two literal portuguese translations of <em>Pride and Prejudice</em></li>
+							<li>An exact/plagiarised copy of a text</li>
 						</ul>
+
+						<p>What do you expect their TTR will be?</p>
 					</section>
 
 
@@ -601,14 +610,14 @@
  					<section>
  						<h3><span style="font-family: monospace">grep</span></h3>
 
- 						<pre><code class="nohighlight">cat file.txt | grep "'finestra'"</code></pre>
+ 						<pre><code class="nohighlight">cat file.txt | grep "'window'"</code></pre>
 
  						Cerca ed elenca tutte le occorrenze di <span style="font-family: monospace">'finestra'</span> nel file <span style="font-family: monospace">file.txt</span>
  					</section>
 
 
  					<section>
-						<h3>Invert matching con <span style="font-family: monospace">grep</span></h3>
+						<h3>Invert matching with <span style="font-family: monospace">grep</span></h3>
 						<p>Trova tutte le voci/righe che non contengono una stringa di testo o elemento.</p>
 						<pre><code class="nohighlight">cat file.txt | grep -v "agg."</code></pre>
 
@@ -619,11 +628,18 @@
 						<pre><code class="nohighlight">cat file.txt | grep -v -e "agg." -e "avv." -e "v." -e "indef." ...</code></pre>
 					</section>
 
+
+					<section>
+						<h3>Lookahead</h3>
+						<p><span style="font-family: monospace">\t(?=[a-z])</span>: lookahead command matching a tab that is followed by text</p>
+					</section>
+
+
 					<section>
 						<h2>Mixed commands</h2>
 
 						<ul>
-							<li><span style="font-family: monospace">\t(?=[a-z])</span>: lookahead command matching a tab that is followed by text</li>
+							
 							<li><span style="font-family: monospace">\t(?!,)</span>: lookahead command matching tabs not followed by a comma; the <code>?!</code> operator is a negation</li>
 							<li><code>(?<=[0-9])\t</code>: lookbehind command matching a tab that is preceeded by a number</li>
 							<li><code>\w*</code> matches all words/text (not numbers)</li>
