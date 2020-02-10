@@ -11,7 +11,7 @@ lignes_vides <- which(mon_texte == "")
 mon_texte <- mon_texte[-lignes_vides]
 
 # Ensuite, nous pouvons diviser le texte en mots
-# "\\W" est une expression régulière. Elle signifie: tout ce qui n'est pas un caractère (donc les espaces blancs et la ponctuation)
+# "\\W" est une expression régulière. Elle signifie: tout ce qui n'est pas une lettre (donc les espaces blancs et la ponctuation)
 mon_texte <- strsplit(x = mon_texte, split = "\\W")
 
 # le résultat est une "liste", avec toutes les phrases divisées en mots
@@ -34,7 +34,7 @@ nombre_de_gout <- 0
 # Puis on lit tous les mots du texte
 for(mot in mon_texte){
   # si le mot est goût
-  if(mot == "goût"){
+  if(tolower(mot) == "goût"){ #"tolower" signifie le mot en minuscule (pour que l'on retrouve aussi "Goût")
     # nous augmentons le compteur d'un
     nombre_de_gout <- nombre_de_gout+1
   }
@@ -42,3 +42,8 @@ for(mot in mon_texte){
 
 # ...et voici le résultat!!
 nombre_de_gout
+
+# C'est la méthode la plus basique (boucle)
+# mais il existe aussi des méthodes beaucoup plus rapides: par exemple, nous pouvons utiliser "qui"
+
+nombre_de_gout <- length(which(tolower(mon_texte) == "goût"))
