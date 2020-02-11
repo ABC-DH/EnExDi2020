@@ -51,6 +51,32 @@
 		<div class="reveal">
 			<div class="slides">
 
+
+				<section class="smaller">
+					<h3>Install Github</h3>
+					<p><span class="highlight">Ubuntu</span> 
+						<ul style="list-style: none">
+							<li>Open your terminal (Ctrl+Alt+t)</li>
+							<li>Type <code>sudo apt update</code></li>
+							<li>Type <code>sudo apt install git</code></li>
+							<li>Type <code>git --version</code>. If it answers with the number of version (for example, 2.17.1 or another number) is OK!</li>
+						</ul>
+					</p>
+
+					<p><span class="highlight">MacOS</span>: 
+						<ul style="list-style: none">
+							<li>Download and install from<br/><code>https://git-scm.com/download/mac</code><br/>("Click here to download manually")</li>
+						</ul>
+					</p>
+
+					<p><span class="highlight">Windows</span>: 
+						<ul style="list-style: none">
+							<li>Download and install from <br/><code>https://git-scm.com/download/win</code><br/>("Click here to download manually"). During the installation, click on "Next" to confirm the default parameters.</li>
+						</ul>
+					</p>
+
+				</section>
+
 				<!-- <a title="U.S. Census [Public domain]" href="https://commons.wikimedia.org/wiki/File:Early_US_Census_Machines_1960_08012.jpg"><img width="512" alt="Early US Census Machines 1960 08012" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Early_US_Census_Machines_1960_08012.jpg/512px-Early_US_Census_Machines_1960_08012.jpg"></a> -->
 				<section>
 					<p class="big">Get to know your computer .1</p>
@@ -94,7 +120,7 @@
 				<section>
 					<div>
 						<img src="img/fileSystemEle.jpg" width="50%">
-						<p class="small">Absolute path (from root / )</p>
+						<p class="small">Absolute path (from root, starts with "/" )</p>
 						<pre><code class="nohighlight">/home/espadini/Documents/EnExDi/materials</code></pre>
 					</div>
 					<div class="fragment">
@@ -264,10 +290,11 @@
 
 				<section>
 					<h3>Github</h3>
-					<br/>
-					In the terminal, once you are in the location where you want to download EnExDi2020 materials, type:<br/><br/>
+					In the terminal, once you are in the location where you want to download EnExDi2020 materials, type:<br/>
 					<pre><code class="nohighlight">$ git clone https://github.com/ABC-DH/EnExDi2020.git</code></pre>
 					<p class="small">Get a copy of the git repository<br/><a href="https://github.com/ABC-DH/EnExDi2020">https://github.com/ABC-DH/EnExDi2020</a></p>
+					<br/>
+					<p style="font-size:0.9em"><span class="highlight">Alternative (if <em>git</em> not installed)</span>: go to<br/><a href="https://github.com/ABC-DH/EnExDi2020">https://github.com/ABC-DH/EnExDi2020</a>, click the green button "Clone or download", choose Download Zip. Unzip it and place where you want in your computer.</p>
 				</section>
 
 				<section>
@@ -277,14 +304,18 @@
 					<p class="smallest">https://tekraze.com/2018/01/introduction-git-version-control/</p>
 				</section>
 
-				<section>
+				<section class="small">
+					<p>
 					At the beginning of <span class="highlight">every course</span>:
-					<br/><br/>
-					<ol>
-						<li>Open your terminal</li>
-						<li>Navigate to EnExDi2020, using <code>cd</code> and the absolute path noted</li>
-						<li>Type <pre><code class="nohighlight">git pull</code></pre> to update the folder</li>
-					</ol>
+						<ol>
+							<li>Open your terminal</li>
+							<li>Navigate to EnExDi2020, using <code>cd</code> and the absolute path noted + "/EnExDi2020". For example:
+								<pre><code class="nohighlight">cd /home/espadini/Documents/EnExDi2020</code></pre></li>
+							<li>Type <pre><code class="nohighlight">git pull</code></pre> to update the folder.</li>
+						</ol>
+					</p>
+					<br/>
+					<p style="font-size:0.9em"><span class="highlight">Alternative (if <em>git</em> not installed)</span>: go to<br/><a href="https://github.com/ABC-DH/EnExDi2020">https://github.com/ABC-DH/EnExDi2020</a>, click the green button "Clone or download", choose Download Zip. Unzip it and place where you want in your computer (and delete the old version!).</p>
 				</section>
 
 
