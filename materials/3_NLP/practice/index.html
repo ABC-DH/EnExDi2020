@@ -119,7 +119,7 @@
 							<li class="fragment">run some preliminary calculations: total number of words (<em>tokens</em>), total number of unique words (<em>types</em>)</li>
 						</ol>
 						<p class="fragment" style="font-size: 20pt; text-align: left;">For our calculations and the use of many NLP tools, the corpus needs to meet these requirements:</p>
-						<ul style="font-size: 20pt; text-align: left">
+						<ul style="font-size: 20pt; text-align: left; list-style: none;">
 							<li class="fragment">TXT format</li>
 							<li class="fragment">No XML markup</li>
 						</ul>
@@ -130,9 +130,9 @@
 
 					<section>
 						<h2>Text preparation</h2>
-						<p>Download the corpus</p>
+						<p>The corpus</p>
 						<ol style="font-size: 20pt;">
-							<li>Download the corpus to a folder on the Desktop</li>
+							<li>Make a copy of the <span style="font-family: monospace;">data</span> folder in <span style="font-family: monospace;">EnExDi2020</span> and rename it <span style="font-family: monospace;">data-nlp</span></li>
 							<li>Study the files: what to keep and/or remove? E.g.:</li>
 								<ul>
 									<li>Preamble</li>
@@ -154,7 +154,7 @@
 						<h2>Text preparation</h2>
 						<p>Move into the corpus directory</p>
 						<br />
-						<pre><code class="nohighlight">cd Desktop/corpus</code></pre>
+						<pre><code class="nohighlight">cd EnExDi2020/corpus</code></pre>
 					</section>
 
 
@@ -319,7 +319,7 @@
  					</section>
 
 
- 					<section> 
+ 					<!--<section> 
 						<h2>TreeTagger</h2>
 						<p>Mac OSX and Linux instructions</p>
 						<ol style="font-size: 20pt;">
@@ -328,27 +328,29 @@
 							<li>Download the <span style="background-color: black; color: white; font-size: 20pt; font-family: monospace">&nbsp;install-tagger.sh&nbsp;</span> to the <span style="font-family: monospace">treetagger</span> folder</li>
 							<li>Download the two French parameter files <span style="background-color: black; color: white; font-size: 20pt; font-family: monospace">&nbsp;french.par&nbsp;</span> and <span style="background-color: black; color: white; font-size: 20pt; font-family: monospace">&nbsp;old-french.par&nbsp;</span> to the folder <span style="font-family: monospace">treetagger/lib</span> and extract their contents</li>
 						</ol>
-					</section>
+					</section>-->
 
 
-					<section> 
+					<!--<section> 
 						<h2>TreeTagger</h2>
 						<p>Windows instructions - see TXT file provided</p>
+					</section>-->
+
+
+					<section> 
+						<h2>TreeTagger</h2>
+						<p style="font-size: 20pt;">Add text/corpus to the main <span style="font-family: monospace">treetagger</span> folder as a clean raw text file</p>
+
+						<p style="font-size: 20pt;">In our case, the text file is <span style="font-family: monospace">corpus-tokens.txt</span></p>
+
+						<img src="./images/treetagger-contents.png" style="box-shadow: none !important; width: 500px" />
 					</section>
 
 
 					<section> 
 						<h2>TreeTagger</h2>
-						<p>Add text/corpus to the main <span style="font-family: monospace">treetagger</span> folder as a clean raw text file</p>
-						<br />
-						<p>In our case, the text file is <span style="font-family: monospace">corpus-tokens.txt</span></p>
-					</section>
-
-
-					<section> 
-						<h2>TreeTagger</h2>
-						<p>Open the command line and navigate to <span style="font-family: monospace">Desktop/treetagger</span></p>
-						<br />
+						<p style="font-size: 20pt;">Open the command line and navigate to <span style="font-family: monospace">Desktop/treetagger</span></p>
+						
 						<p>to tag a text with the <span style="font-family: monospace">french.par</span> parameter:</p>
 						<pre><code class="nohighlight">cat corpus-tokens.txt | cmd/tree-tagger-french  > corpus.tagged</code></pre>
 
@@ -391,6 +393,15 @@
 								</ul>
 						</ul>
 					</section>
+
+
+					<section>
+						<h2>TreeTagger</h2>
+						<br />
+						<p>Try with your own text!</p>
+						
+					</section>
+			
 			
 
  				</section>
@@ -404,7 +415,7 @@
 
  				
 
- 				<section>
+ 				<!--<section>
  					<section>
  						<h1>Command line</h1>
  						<h2>Lexical richness</h2>
@@ -413,13 +424,13 @@
 
  					<section>
  						<h2>Lexical richness</h2>
- 						<p>Clean and remove XML markup from the file BOYER_AGAMEMNON.xml, saving the output to a BOYER_AGAMEMNON.txt file.</p>
+ 						<p>Clean and remove XML markup from the file <span style="font-family: monospace;">BOYER_AGAMEMNON.xml</span>, saving the output to a <span style="font-family: monospace;">BOYER_AGAMEMNON.txt file</span>.</p>
  					</section>
 					
 
 					<section>
 						<h2>Lexical richness</h2>
-						<p>Next, open <span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;BOYER_AGAMEMNON.txt&nbsp;</span></p>
+						<p>Next, open <span style="font-family: monospace;">BOYER_AGAMEMNON.txt</span></p>
 						<br />
 						<pre><code class="nohighlight">cat BOYER_AGAMEMNON.txt</code></pre>
 					</section>
@@ -427,8 +438,8 @@
 
 					<section> 
 						<h2>Lexical richness</h2>
-						<p>Lower case the text<br />
-							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;tr '[:upper:]' '[:lower:]'&nbsp;</span></p>
+						<p>Lower-case the text<br />
+							<span style="font-family: monospace;">tr '[:upper:]' '[:lower:]'</span></p>
 
 						<br />
 						<pre><code class="nohighlight">cat BOYER_AGAMEMNON.txt | tr '[:upper:]' '[:lower:]'</code></pre>
@@ -438,7 +449,7 @@
 					<section>
 						<h2>Lexical richness</h2>
 						<p>Transform punctuation in new lines:<br />
-							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;tr '[:punct:]' '\n'&nbsp;</span></p>
+							<span style="font-family: monospace;">tr '[:punct:]' '\n'</span></p>
 						
 						<br />
 						<pre><code class="nohighlight">cat BOYER_AGAMEMNON.txt | tr '[:upper:]' '[:lower:]' | tr '[:punct:]' '\n'</code></pre>
@@ -448,7 +459,7 @@
 					<section>
 						<h2>Lexical richness</h2>
 						<p>Transform white spaces in new lines:<br />
-							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;tr '[:space:]' '\n'&nbsp;</span></p>
+							<span style="font-family: monospace;">tr '[:space:]' '\n'</span></p>
 						
 						<br />	
 						<pre><code class="nohighlight">cat BOYER_AGAMEMNON.txt | tr '[:upper:]' '[:lower:]' | tr '[:punct:]' '\n' | tr '[:space:]' '\n'</code></pre>
@@ -458,7 +469,7 @@
 					<section>
 						<h2>Lexical richness</h2>
 						<p>Remove blank lines:<br />
-							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;sed '/^\s*$/d'&nbsp;</span></p>
+							<span style="font-family: monospace;">sed '/^\s*$/d'</span></p>
 						
 						<br />
 						<pre><code class="nohighlight">cat BOYER_AGAMEMNON.txt | tr '[:upper:]' '[:lower:]' | tr '[:punct:]' '\n' | tr '[:space:]' '\n' | sed '/^\s*$/d'</code></pre>
@@ -468,7 +479,7 @@
 					<section>
 						<h2>Lexical richness</h2>
 						<p>Save results to a new file:<br />
-							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;> BOYER_AGAMEMNON.txt.tokens&nbsp;</span></p>
+							<span style="font-family: monospace;">&nbsp;> BOYER_AGAMEMNON.txt.tokens</span></p>
 						
 						<br />
 						<pre><code class="nohighlight">cat BOYER_AGAMEMNON.txt | tr '[:upper:]' '[:lower:]' | tr '[:punct:]' '\n' | tr '[:space:]' '\n' | sed '/^\s*$/d' > BOYER_AGAMEMNON.txt.tokens</code></pre>
@@ -477,9 +488,7 @@
 
 					<section>
 						<h2>Lexical richness</h2>
-						<p>Calculate the total number of tokens:<br />
-							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;wc -l BOYER_AGAMEMNON.txt.tokens&nbsp;</span></p>
-						
+						<p>Calculate the total number of tokens:<br />					
 						<br />
 						<pre><code class="nohighlight">wc -l BOYER_AGAMEMNON.txt.tokens</code></pre>
 					</section>
@@ -496,7 +505,7 @@
 					<section>
 						<h2>Lexical richness</h2>
 						<p>Order tokens alphabetically:<br />
-							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;sort&nbsp;</span></p>
+							<span style="font-family: monospace;">sort</span></p>
 						<br />
 						<pre><code class="nohighlight">cat BOYER_AGAMEMNON.txt.tokens | sort</code></pre>
 					</section>
@@ -505,7 +514,7 @@
 					<section>
 						<h2>Lexical richness</h2>
 						<p>Group duplicates into a single entry:<br />
-							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;uniq -c&nbsp;</span></p>
+							<span style="font-family: monospace;">uniq -c</span></p>
 						<br />
 						<pre><code class="nohighlight">cat BOYER_AGAMEMNON.txt.tokens | sort | uniq -c</code></pre>
 					</section>
@@ -514,7 +523,7 @@
 					<section>
 						<h2>Lexical richness</h2>
 						<p>Save resuls to a new file:<br />
-							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;> BOYER_AGAMEMNON.txt.types&nbsp;</span></p>
+							<span style="font-family: monospace;">&nbsp;> BOYER_AGAMEMNON.txt.types</span></p>
 						<br />
 						<pre><code class="nohighlight">cat BOYER_AGAMEMNON.txt.tokens | sort | uniq -c > BOYER_AGAMEMNON.txt.types</code></pre>
 					</section>
@@ -523,8 +532,6 @@
 					<section>
 						<h2>Lexical richness</h2>
 						<p>Calculate the total number of types:<br />
-							<span style="color: white; background-color: black; font-family: monospace; font-size: 20pt">&nbsp;wc -l BOYER_AGAMEMNON.txt.types&nbsp;</span></p>
-						
 						<br />
 						<pre><code class="nohighlight">wc -l BOYER_AGAMEMNON.txt.types</code></pre>
 					</section>
@@ -562,7 +569,7 @@
 					<section>
 						<img src="./images/question.png" style="border: none; box-shadow: none !important; width: 200px;">
 					</section>
-				</section>
+				</section>-->
 
 
 				<!--*****************************************
@@ -581,10 +588,10 @@
 								<li><a href="http://guide.bash.academy/" target="_blank" title="Opens in new tab">Bash tutorial</a></li>
 								<li><a href="http://regexr.com/" target="_blank" title="Opens in new tab">RegexR</a></li>
 							</ul>
-						<p>Various</p>
+						<!--<p>Various</p>
 						<ul>
 							<li><a href="https://sites.google.com/site/achimstein/research/resources#h.p_ID_54" target="_blank" title="Opens in new tab">French resources</a></li>
-						</ul>
+						</ul>-->
 					</section>
 				</section>
 
@@ -599,59 +606,98 @@
  					<section>
  						<h1>Other commands</h1>
  					</section>
+
+
  					<section>
  						<h3><span style="font-family: monospace">grep</span></h3>
 
  						<pre><code class="nohighlight">cat file.txt | grep "ciao"</code></pre>
 
- 						Cerca ed elenca tutte le occorrenze di <span style="font-family: monospace">ciao</span> nel file <span style="font-family: monospace">file.txt</span>
+ 						<p style="font-size: 20pt;">Matches all occurrences of <span style="font-family: monospace">ciao</span> in the file <span style="font-family: monospace">file.txt</span></p>
  					</section>
+
 
  					<section>
  						<h3><span style="font-family: monospace">grep</span></h3>
 
  						<pre><code class="nohighlight">cat file.txt | grep "'window'"</code></pre>
 
- 						Cerca ed elenca tutte le occorrenze di <span style="font-family: monospace">'finestra'</span> nel file <span style="font-family: monospace">file.txt</span>
+ 						<p style="font-size: 20pt;">Matches all occurrences of <span style="font-family: monospace">'finestra'</span> in the file <span style="font-family: monospace">file.txt</span></p>
+ 					</section>
+
+
+ 					<section>
+ 						<h3><span style="font-family: monospace">grep -e</span></h3>
+
+ 						<pre><code class="nohighlight">cat file.txt | grep -e "ciao" -e "addio"</code></pre>
+
+ 						<p style="font-size: 20pt;">Matches all occurrences of <span style="font-family: monospace">ciao</span> and <span style="font-family: monospace">addio</span> in a string in <span style="font-family: monospace">file.txt</span></p>
  					</section>
 
 
  					<section>
 						<h3>Invert matching with <span style="font-family: monospace">grep</span></h3>
-						<p>Trova tutte le voci/righe che non contengono una stringa di testo o elemento.</p>
+						<p style="font-size: 20pt;">Trova tutte le voci/righe che non contengono una stringa di testo o elemento.</p>
 						<pre><code class="nohighlight">cat file.txt | grep -v "agg."</code></pre>
 
-						<p>Trova tutto quello che non contiene la parola <span style="font-family: monospace">agg.</span> (<span style="font-family: monospace">-v</span> inverte i risultati)</p>
+						<p style="font-size: 20pt;">Trova tutto quello che non contiene la parola <span style="font-family: monospace">agg.</span> (<span style="font-family: monospace">-v</span> inverte i risultati)</p>
+					</section>
 
-						<p>Per cercare più elementi, aggiungere una <span style="font-family: monospace">-e</span> al comando:</p>
 
-						<pre><code class="nohighlight">cat file.txt | grep -v -e "agg." -e "avv." -e "v." -e "indef." ...</code></pre>
+					<section>
+						<h3><span style="font-family: monospace">grep</span> for specific strings</h3>
+						<pre><code class="nohighlight">egrep 'hello there' filename</code></pre> to search for a specific string of text</p>
 					</section>
 
 
 					<section>
 						<h3>Lookahead</h3>
 						<p><span style="font-family: monospace">\t(?=[a-z])</span>: lookahead command matching a tab that is followed by text</p>
+						<p><span style="font-family: monospace">\t(?!,)</span>: lookahead command matching tabs not followed by a comma; the <span style="font-family: monospace">?!</span> operator is a negation</p>
 					</section>
 
 
 					<section>
-						<h2>Mixed commands</h2>
+						<h3>Lookbehind</h3>
+						<p><span style="font-family: monospace">(?<=[0-9])\t</span>: lookbehind command matching a tab that is preceeded by a number</p>
+					</section>
 
-						<ul>
-							
-							<li><span style="font-family: monospace">\t(?!,)</span>: lookahead command matching tabs not followed by a comma; the <code>?!</code> operator is a negation</li>
-							<li><code>(?<=[0-9])\t</code>: lookbehind command matching a tab that is preceeded by a number</li>
-							<li><code>\w*</code> matches all words/text (not numbers)</li>
-							<li><code>egrep 'hello there' filename</code> to search for a specific string of text</li>
-							<li><code>tail filename</code> to return the last 10 lines of the file</li>
-							<li><code>tail -20 filename</code> to return the last 20 lines of the file</li>
-							<li><code>head filename</code> to return the first 10 lines of the file</li>
-							<li><code>head -20 filename</code> to return the first 20 lines of the file</li>
-							<li><code>top</code> to view all running processes on a machine</li>
-							<li><code>df</code> "Disk Free", to reveal amount of storage space in the current directory</li>
-							<li><code>chardetect file.txt</code> gives me the character encoding of <code>file.txt</code></li>
-						</ul>
+
+					<section>
+						<h3>Words</h3>
+						<p><span style="font-family: monospace">\w*</span>: matches all words/text (not numbers)</p>
+					</section>
+
+
+					<section>
+						<h3>Detect character encoding</h3>
+						<p><span style="font-family: monospace">chardetect file.txt</span> gives me the character encoding of <span style="font-family: monospace">file.txt</span></p>
+					</section>
+
+
+					<section>
+						<h3>Disk Free</h3>
+						<p><span style="font-family: monospace">df</span> to reveal the amount of storage space in the current directory</p>
+					</section>
+
+
+					<section>
+						<h3>Top</h3>
+						<p><span style="font-family: monospace">top</span> to view all running processes on a machine</p>
+					</section>
+
+
+					<section>
+						<h3>Head</h3>
+						<p><span style="font-family: monospace">head filename</span> to return the first 10 lines of the file</p>
+						<p><span style="font-family: monospace">head -20 filename</span> to return the first 20 lines of the file</p>
+					</section>
+
+
+					<section>
+						<h3>Tail</h3>
+							<p><span style="font-family: monospace">tail filename</span> to return the last 10 lines of the file</p>
+							<p><span style="font-family: monospace">tail -20 filename</span> to return the last 20 lines of the file</p>
 					</section>
 
 				</section>
