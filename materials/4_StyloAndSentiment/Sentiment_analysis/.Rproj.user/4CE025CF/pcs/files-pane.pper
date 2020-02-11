@@ -1,0 +1,9 @@
+{
+    "path" : "~/ownCloud/EnExDi2020_datasets/Sentiment_analysis",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
