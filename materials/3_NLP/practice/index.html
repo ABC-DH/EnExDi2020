@@ -98,7 +98,7 @@
 									<li>Regular Expressions (RegEx): sequence of characters identifying a search pattern</li> <!-- do a section on Regex-->
 								</ul>
 							<li class="fragment">Launching NLP tools (e.g. TreeTagger)</li>
-							<li class="fragment">Interaction with both small machines and servers</li>
+							<!--<li class="fragment">Interaction with both small machines and servers</li>-->
 						</ul>					
 					</section>
 
@@ -154,7 +154,7 @@
 						<h2>Text preparation</h2>
 						<p>Move into the corpus directory</p>
 						<br />
-						<pre><code class="nohighlight">cd EnExDi2020/corpus</code></pre>
+						<pre><code class="nohighlight">cd EnExDi2020/data-nlp/corpus</code></pre>
 					</section>
 
 
@@ -175,20 +175,20 @@
 					</section>
 
 
-					<section>
+					<!--<section>
 						<h2>Text preparation</h2>
 						<br />
 						<p><strong>No whitespaces</strong> in file names!</p>
-					</section>
+					</section>-->
 
 
-					<section>
+					<!--<section>
 						<h2>Text preparation</h2>
 						<ul>
 							<li>⇥ keyboard button to automatically complete the command</li>
 							<li>↑ and ↓ keyboard buttons to go through command history</li>
 						</ul>
-					</section>
+					</section>-->
 
 
 					<section>
@@ -197,7 +197,9 @@
 						<br />
 						<pre><code class="nohighlight">cat corpus.xml | sed 's/\<[^<>]*\>//g' > corpus.txt</code></pre>
 						<br />
-						Open the file. What do you notice?
+						<p style="font-size: 20pt;"><strong>Warning!</strong> If this command has the opposite effect (i.e. it keeps all the markup and deletes the text), change the command to:</p>
+						<pre><code class="nohighlight">cat corpus.xml | sed 's/<[^<>]*>//g' > corpus.txt</code></pre>
+
 					</section>
 
 
@@ -208,11 +210,11 @@
 					</section>-->
 
 
-					<section>
+					<!--<section>
 						<h2>Text preparation</h2>
 						<br />
 						<p>More manual and/or automatic cleaning depending on our needs</p>
-					</section>
+					</section>-->
 
 
 					<section>
@@ -349,13 +351,23 @@
 
 					<section> 
 						<h2>TreeTagger</h2>
+						<p>Mac OSX and Linux</p>
 						<p style="font-size: 20pt;">Open the command line and navigate to <span style="font-family: monospace">Desktop/treetagger</span></p>
 						
-						<p>to tag a text with the <span style="font-family: monospace">french.par</span> parameter:</p>
+						<p>To tag a text with the <span style="font-family: monospace">french.par</span> parameter:</p>
 						<pre><code class="nohighlight">cat corpus-tokens.txt | cmd/tree-tagger-french  > corpus.tagged</code></pre>
+					</section>
 
-						<p>to tag a text with the <span style="font-family: monospace">old-french.par</span> parameter:</p>
-						<pre><code class="nohighlight">cat corpus-tokens.txt | cmd/tree-tagger-old-french  > corpus.tagged</code></pre>
+
+					<section> 
+						<h2>TreeTagger</h2>
+						<p>Windows</p>
+						<p style="font-size: 20pt;">Open the command prompt <strong>(NOT Cygwin)*</strong> and navigate to <span style="font-family: monospace">Desktop/treetagger</span></p>
+						
+						<p>To tag a text with the <span style="font-family: monospace">french.par</span> parameter:</p>
+						<pre><code class="nohighlight">tag-french corpus.txt > corpus.tagged</code></pre>
+
+						<p style="font-size: 10pt; margin-top: 50px;">* TreeTagger and Cygwin are not compatible!</p>
 					</section>
 
 
@@ -620,9 +632,9 @@
  					<section>
  						<h3><span style="font-family: monospace">grep</span></h3>
 
- 						<pre><code class="nohighlight">cat file.txt | grep "'window'"</code></pre>
+ 						<pre><code class="nohighlight">cat file.txt | grep "window"</code></pre>
 
- 						<p style="font-size: 20pt;">Matches all occurrences of <span style="font-family: monospace">'finestra'</span> in the file <span style="font-family: monospace">file.txt</span></p>
+ 						<p style="font-size: 20pt;">Matches all occurrences of <span style="font-family: monospace">window</span> in the file <span style="font-family: monospace">file.txt</span></p>
  					</section>
 
 
@@ -635,18 +647,18 @@
  					</section>
 
 
- 					<section>
+ 					<!--<section>
 						<h3>Invert matching with <span style="font-family: monospace">grep</span></h3>
 						<p style="font-size: 20pt;">Trova tutte le voci/righe che non contengono una stringa di testo o elemento.</p>
 						<pre><code class="nohighlight">cat file.txt | grep -v "agg."</code></pre>
 
 						<p style="font-size: 20pt;">Trova tutto quello che non contiene la parola <span style="font-family: monospace">agg.</span> (<span style="font-family: monospace">-v</span> inverte i risultati)</p>
-					</section>
+					</section>-->
 
 
 					<section>
 						<h3><span style="font-family: monospace">grep</span> for specific strings</h3>
-						<pre><code class="nohighlight">egrep 'hello there' filename</code></pre> to search for a specific string of text</p>
+						<pre><code class="nohighlight">egrep 'hello there' file.txt</code></pre> to search for a specific string of text</p>
 					</section>
 
 
