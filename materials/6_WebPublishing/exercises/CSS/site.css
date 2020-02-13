@@ -1,0 +1,38 @@
+p {
+    color: blue;
+}
+
+h2 {
+    color: red;
+}
+
+.intro {
+    display:inline-block;
+    padding: 50px;
+    background-color:yellow;
+    border:1px solid black;
+}
+
+
+
+/* 
+ * EXERCISE:
+ * 
+ * Don't forget to refresh the page in the browser each time you change something here!
+ * 
+ * 1. Change the value of the properties in this file and look at the result.
+
+ * 2. Change the size of the font using the property 'font-size'. Use MDN to know which values you can give to this property:
+ * <https://developer.mozilla.org/en-US/docs/Web/CSS/font-size>.
+ 
+ * 3. Change the alignment of the text, from left to right, with the property 'text-align'.
+ * Accepted values are 'left', 'right', 'center', 'justify'.
+ 
+ * 4. Change the color of the highlighted part. The property for doing that is already in this CSS ;)
+
+ * 5. (optional) find online (W3C or MDN) a new property and apply it.
+
+ * 6. (optional) If you've created 'about.HTML', add the link to the CSS in order to apply the styles also to that file
+ 
+ * 
+ */
